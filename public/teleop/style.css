@@ -1,14 +1,14 @@
 #nextButton {
   position: absolute;
   right: 7vh;
-  top: 2vh;
+  top: 50vh;
   z-index: 10;
 }
 
 #backButton {
   position: absolute;
   right: 7vh;
-  top: 50vh;
+  top: 2vh;
   z-index: 10;
 }
 

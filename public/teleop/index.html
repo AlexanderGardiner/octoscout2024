@@ -9,17 +9,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="backButton" class="backButton" onclick="nextPage()"></button>
+    <button id="backButton" class="backButton" onclick="backButton()"></button>
     <button id="nextButton" class="nextButton" onclick="nextPage()"></button>
-    <button id="topButton" onclick="nextPage()"></button>
-    <button id="middleButton" onclick="nextPage()"></button>
-    <button id="bottomButton" onclick="nextPage()"></button>
+    <button id="topButton" onclick="collectPiece('top')"></button>
+    <button id="middleButton" onclick="collectPiece('middle')"></button>
+    <button id="bottomButton" onclick="collectPiece('bottom')"></button>
 
-    <button id="speakerButton" onclick="nextPage()">Speaker</button>
-    <button id="ampButton" onclick="nextPage()">Amp</button>
-    <button id="trapButton" onclick="nextPage()">Trap</button>
-    <button id="failedButton" onclick="nextPage()">Failed</button>
-    <div id="notesViewer"><h4 id="notesViewerTitle">Notes Viewer</h4></div>
+    <button id="speakerButton" onclick="resultPiece('speaker')">Speaker</button>
+    <button id="ampButton" onclick="resultPiece('amp')">Amp</button>
+    <button id="trapButton" onclick="resultPiece('trap')">Trap</button>
+    <button id="failedButton" onclick="resultPiece('failed')">Failed</button>
+    <div id="notesViewer">
+      <h4 id="notesViewerTitle">Notes Viewer</h4>
+      <div id="notesContainer"></div>
+    </div>
     <img id="field" src="./field.png"></img>
     <script src="script.js"></script>
   </body>
