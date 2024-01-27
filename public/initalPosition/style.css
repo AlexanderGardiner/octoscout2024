@@ -1,0 +1,26 @@
+#fieldImage {
+  margin-top: 15vh;
+  height: 65vh;
+}
+.robotButton {
+  height: 10vh;
+  width: 10vh;
+  margin-right: 10vh;
+  position: absolute;
+  background-color: #e60896;
+}
+
+.robotButton:hover {
+  background-color: #e461b4;
+}
+
+#topRobotButton {
+  top: 27%;
+}
+
+#middleRobotButton {
+  top: 40%;
+}
+#bottomRobotButton {
+  top: 65%;
+}

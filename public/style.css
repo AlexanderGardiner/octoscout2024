@@ -1,0 +1,30 @@
+#scoutName {
+  top: 20vh;
+}
+
+#teamNumber {
+  top: 35vh;
+}
+
+#matchNumber {
+  top: 50vh;
+}
+
+#teamColour {
+  top: 65vh;
+}
+
+#nextButton {
+  bottom: 5vh;
+  background-color: #6cbedc;
+}
+
+#nextButton:hover {
+  background-color: #8dc2d6;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}

@@ -1,0 +1,101 @@
+#nextButton {
+  position: absolute;
+  right: 7vh;
+  top: 2vh;
+  z-index: 10;
+}
+
+#backButton {
+  position: absolute;
+  right: 7vh;
+  top: 50vh;
+  z-index: 10;
+}
+
+#topButton {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  z-index: 10;
+  top: 30vw;
+  left: 5vw;
+}
+
+#middleButton {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  z-index: 10;
+  top: 55vw;
+  left: 5vw;
+}
+
+#bottomButton {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  z-index: 10;
+  top: 80vw;
+  left: 5vw;
+}
+
+#speakerButton {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  z-index: 10;
+  bottom: 30vh;
+  left: 15vw;
+}
+
+#ampButton {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  z-index: 10;
+  bottom: 30vh;
+  right: 15vw;
+}
+
+#trapButton {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  z-index: 10;
+  bottom: 5vh;
+  left: 15vw;
+}
+
+#failedButton {
+  position: absolute;
+  width: 10vh;
+  height: 10vh;
+  z-index: 10;
+  bottom: 5vh;
+  right: 15vw;
+}
+
+#field {
+  position: absolute;
+  width: 58vw;
+  z-index: 5;
+  border-radius: 1vh;
+  top: 1vh;
+  left: 1vh;
+}
+
+#notesViewer {
+  position: absolute;
+  right: 1vh;
+  top: 8vh;
+  background-color: #bb9839;
+  width: 16.5vh;
+  height: 88vw;
+  z-index: 5;
+  border-radius: 1vh;
+  text-align: center;
+}
+
+#notesViewerTitle {
+  margin-top: 1vh;
+}
