@@ -9,21 +9,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="backButton" class="backButton" onclick="backButton()"></button>
-    <button id="nextButton" class="nextButton" onclick="nextPage()"></button>
-    <button id="topButton" onclick="collectPiece('top')"></button>
-    <button id="middleButton" onclick="collectPiece('middle')"></button>
-    <button id="bottomButton" onclick="collectPiece('bottom')"></button>
-
-    <button id="speakerButton" onclick="resultPiece('speaker')">Speaker</button>
-    <button id="ampButton" onclick="resultPiece('amp')">Amp</button>
-    <button id="trapButton" onclick="resultPiece('trap')">Trap</button>
-    <button id="failedButton" onclick="resultPiece('failed')">Failed</button>
-    <div id="notesViewer">
-      <h4 id="notesViewerTitle">Notes Viewer</h4>
-      <div id="notesContainer"></div>
+    <div id="rightContainer">
+      <button id="backButton" class="backButton" onclick="backButton()"></button>
+      
+      <div id="notesViewer">
+        <h4 id="notesViewerTitle">Notes Viewer</h4>
+        <div id="notesContainer"></div>
+      </div>
+      <button id="nextButton" class="nextButton" onclick="nextPage()"></button>
     </div>
-    <img id="field" src="./field.png"></img>
+    <div id="leftContainer">
+      <img id="field" src="./field.png"></img>
+      <button id="topButton" onclick="collectPiece('top')"></button>
+      <button id="middleButton" onclick="collectPiece('middle')"></button>
+      <button id="bottomButton" onclick="collectPiece('bottom')"></button>
+    </div>
+    <div id="bottomContainer">
+      <button id="speakerButton" onclick="resultPiece('speaker')">Speaker</button>
+      <button id="ampButton" onclick="resultPiece('amp')">Amp</button>
+      <br>
+      <button id="trapButton" onclick="resultPiece('trap')">Trap</button>
+      <button id="failedButton" onclick="resultPiece('failed')">Failed</button>
+    </div>
+    
     <script src="script.js"></script>
   </body>
 </html>

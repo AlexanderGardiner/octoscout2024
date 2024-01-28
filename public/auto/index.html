@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Octo Scout 2024</title>
+    <link rel="stylesheet" href="../globalStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="rightContainer">
+      <button id="backButton" class="backButton" onclick="backButton()"></button>
+      
+      <div id="notesViewer">
+        <h4 id="notesViewerTitle">Notes Viewer</h4>
+        <div id="notesContainer"></div>
+      </div>
+      <button id="nextButton" class="nextButton" onclick="nextPage()"></button>
+    </div>
+    <div id="leftContainer">
+      <img id="field" src="./field.png"></img>
+      <!--1 is to the left looking from the red alliance side-->
+      <button id="middle1Button" class="noteButton" onclick="collectPiece('middle1')"></button>
+      <button id="middle2Button" class="noteButton" onclick="collectPiece('middle2')"></button>
+      <button id="middle3Button" class="noteButton" onclick="collectPiece('middle3')"></button>
+      <button id="middle4Button" class="noteButton" onclick="collectPiece('middle4')"></button>
+      <button id="middle5Button" class="noteButton" onclick="collectPiece('middle5')"></button>
+      <button id="close1ButtonBlue" class="noteButton" onclick="collectPiece('close1Blue')"></button>
+      <button id="close2ButtonBlue" class="noteButton" onclick="collectPiece('close2Blue')"></button>
+      <button id="close3ButtonBlue" class="noteButton" onclick="collectPiece('close3Blue')"></button>
+      <button id="close1ButtonRed" class="noteButton" onclick="collectPiece('close1Red')"></button>
+      <button id="close2ButtonRed" class="noteButton" onclick="collectPiece('close2Red')"></button>
+      <button id="close3ButtonRed" class="noteButton" onclick="collectPiece('close3Red')"></button>
+    </div>
+    <div id="bottomContainer">
+      <button id="speakerButton" onclick="resultPiece('speaker')">Speaker</button>
+      <button id="ampButton" onclick="resultPiece('amp')">Amp</button>
+      <br>
+      <button id="failedButton" onclick="resultPiece('failed')">Failed</button>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>

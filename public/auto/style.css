@@ -21,6 +21,7 @@
   z-index: 5;
   border-radius: 1vh;
   text-align: center;
+  overflow: scroll;
 }
 
 #notesViewerTitle {
@@ -49,36 +50,75 @@
   width: 100vw;
 }
 
-#topButton {
+.noteButton {
+  border-radius: 100%;
   position: absolute;
-  width: 7vh;
-  height: 7vh;
-  top: 10vh;
-  left: 1vh;
+  width: 2vh;
+  height: 2vh;
   z-index: 10;
 }
 
-#middleButton {
-  position: absolute;
-  width: 7vh;
-  height: 7vh;
-  top: 21vh;
-  left: 1vh;
-  z-index: 10;
+#middle1Button {
+  top: 24vh;
+  left: 2vh;
+  background-color: #acf5b2;
+}
+#middle2Button {
+  top: 24vh;
+  left: 6.5vh;
+  background-color: #5eff6b;
+}
+#middle3Button {
+  top: 24vh;
+  left: 11vh;
+  background-color: #00ff15;
+}
+#middle4Button {
+  top: 24vh;
+  left: 15.5vh;
+  background-color: #008a0b;
+}
+#middle5Button {
+  top: 24vh;
+  left: 20vh;
+  background-color: #004d06;
 }
 
-#bottomButton {
-  position: absolute;
-  width: 7vh;
-  height: 7vh;
-  top: 33vh;
-  left: 1vh;
-  z-index: 10;
+#close1ButtonBlue {
+  top: 9vh;
+  left: 11vh;
+  background-color: #a7b7ff;
+}
+#close2ButtonBlue {
+  top: 9vh;
+  left: 15.25vh;
+  background-color: #6580fa;
+}
+#close3ButtonBlue {
+  top: 9vh;
+  left: 19.5vh;
+  background-color: #0050fc;
+}
+
+#close1ButtonRed {
+  top: 39vh;
+  left: 11vh;
+  background-color: #ffa7a7;
+}
+#close2ButtonRed {
+  top: 39vh;
+  left: 15.25vh;
+  background-color: #fa6565;
+}
+#close3ButtonRed {
+  top: 39vh;
+  left: 19.5vh;
+  background-color: #fc0000;
 }
 
 #speakerButton {
-  width: 15vh;
-  height: 15vh;
+  width: 14vh;
+  height: 14vh;
   z-index: 10;
   bottom: 30vh;
   margin: 1vh;
