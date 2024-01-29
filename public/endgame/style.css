@@ -1,0 +1,36 @@
+.inputLabel {
+  display: inline;
+  color: #bb9839;
+  margin: 1vh;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+select {
+  height: 4vh;
+  margin-top: 15vh;
+}
+
+#container {
+  text-align: center;
+}
+
+#nextButton {
+  position: absolute;
+  z-index: 10;
+  margin: 3vh auto;
+  display: block;
+  bottom: 0vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+#backButton {
+  position: absolute;
+  z-index: 10;
+  margin: 3vh auto;
+  display: block;
+  top: 0vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}

@@ -76,5 +76,14 @@ function backButton() {
 }
 
 function nextButton() {
+  let collectionLocations = [];
+  let results = [];
+  for (let i = 0; i < notes.length; i++) {
+    collectionLocations.push(notes[i].collectionLocation);
+    results.push(notes[i].result);
+  }
+
+  localStorage.setItem("autoNotesLocations", collectionLocations);
+  localStorage.setItem("autoNotesResults", results);
   window.location.href = "../teleop";
 }

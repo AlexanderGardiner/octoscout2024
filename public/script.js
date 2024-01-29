@@ -1,15 +1,6 @@
 let scoutName = localStorage.getItem("scoutName");
 localStorage.clear();
 localStorage.setItem("scoutName", scoutName);
-localStorage.setItem("speakerPiece", 0);
-localStorage.setItem("ampPiece", 0);
-localStorage.setItem("ampSpeakerPiece", 0);
-localStorage.setItem("failedPiece", 0);
-localStorage.setItem("speakerPieceAuto", 0);
-localStorage.setItem("ampPieceAuto", 0);
-localStorage.setItem("ampSpeakerPieceAuto", 0);
-localStorage.setItem("failedPieceAuto", 0);
-
 function nextButton() {
   let scoutName = document.getElementById("scoutNameInput").value;
   let teamNumber = document.getElementById("teamNumberInput").value;

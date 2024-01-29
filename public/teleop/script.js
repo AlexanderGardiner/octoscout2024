@@ -60,5 +60,14 @@ function backButton() {
 }
 
 function nextButton() {
-  window.location.href = "/endgame";
+  let collectionLocations = [];
+  let results = [];
+  for (let i = 0; i < notes.length; i++) {
+    collectionLocations.push(notes[i].collectionLocation);
+    results.push(notes[i].result);
+  }
+
+  localStorage.setItem("teleopNotesLocations", collectionLocations);
+  localStorage.setItem("teleopNotesResults", results);
+  window.location.href = "../endgame";
 }
