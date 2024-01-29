@@ -71,6 +71,10 @@ class Note {
   }
 }
 
-function backButton() {}
+function backButton() {
+  window.location.href = "../initalPosition";
+}
 
-function nextButton() {}
+function nextButton() {
+  window.location.href = "../teleop";
+}

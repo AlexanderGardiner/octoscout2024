@@ -20,16 +20,16 @@
     </div>
     <div id="leftContainer">
       <img id="field" src="./field.png"></img>
-      <button id="topButton" onclick="collectPiece('top')"></button>
-      <button id="middleButton" onclick="collectPiece('middle')"></button>
-      <button id="bottomButton" onclick="collectPiece('bottom')"></button>
+      <button id="topButton" class="collectionButton" onclick="collectPiece('top')"></button>
+      <button id="middleButton" class="collectionButton" onclick="collectPiece('middle')"></button>
+      <button id="bottomButton" class="collectionButton" onclick="collectPiece('bottom')"></button>
     </div>
     <div id="bottomContainer">
-      <button id="speakerButton" onclick="resultPiece('speaker')">Speaker</button>
-      <button id="ampButton" onclick="resultPiece('amp')">Amp</button>
-      <br>
-      <button id="trapButton" onclick="resultPiece('trap')">Trap</button>
-      <button id="failedButton" onclick="resultPiece('failed')">Failed</button>
+      <button class="placementButton" onclick="resultPiece('speaker')">Speaker</button>
+      <button class="placementButton" onclick="resultPiece('amp')">Amp</button>
+      <button class="placementButton" onclick="resultPiece('ampSpeaker')">Amp Speaker</button>
+      <button class="placementButton" onclick="resultPiece('trap')">Trap</button>
+      <button class="placementButton" onclick="resultPiece('failed')">Failed</button>
     </div>
     
     <script src="script.js"></script>

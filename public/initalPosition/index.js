@@ -1,22 +1,13 @@
-function topRobotClick() {
-  localStorage.setItem("startingRobotPosition", "top");
-  nextPage();
+let startingRobotPosition = "Not Set";
+function selectPosition(position) {
+  startingRobotPosition = position;
 }
 
-function middleRobotClick() {
-  localStorage.setItem("startingRobotPosition", "middle");
-  nextPage();
+function nextButton() {
+  localStorage.setItem("startingRobotPosition", startingRobotPosition);
+  window.location.href = "../auto";
 }
 
-function bottomRobotClick() {
-  localStorage.setItem("startingRobotPosition", "bottom");
-  nextPage();
-}
-
-function nextPage() {
-  window.location.href = "../mobilityAuto";
-}
-
-function previousPage() {
+function backButton() {
   window.location.href = "/";
 }

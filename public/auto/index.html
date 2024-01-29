@@ -16,7 +16,7 @@
         <h4 id="notesViewerTitle">Notes Viewer</h4>
         <div id="notesContainer"></div>
       </div>
-      <button id="nextButton" class="nextButton" onclick="nextPage()"></button>
+      <button id="nextButton" class="nextButton" onclick="nextButton()"></button>
     </div>
     <div id="leftContainer">
       <img id="field" src="./field.png"></img>
@@ -32,12 +32,16 @@
       <button id="close1ButtonRed" class="noteButton" onclick="collectPiece('close1Red')"></button>
       <button id="close2ButtonRed" class="noteButton" onclick="collectPiece('close2Red')"></button>
       <button id="close3ButtonRed" class="noteButton" onclick="collectPiece('close3Red')"></button>
+
+      <h3 id="mobilityCheckboxLabel">Mobility: </h3>
+      <input type="checkbox" id="mobilityCheckbox" value="Mobility">
+      
     </div>
     <div id="bottomContainer">
-      <button id="speakerButton" onclick="resultPiece('speaker')">Speaker</button>
-      <button id="ampButton" onclick="resultPiece('amp')">Amp</button>
+      <button class="placementButton" onclick="resultPiece('speaker')">Speaker</button>
+      <button class="placementButton" onclick="resultPiece('amp')">Amp</button>
       <br>
-      <button id="failedButton" onclick="resultPiece('failed')">Failed</button>
+      <button class="placementButton" onclick="resultPiece('failed')">Failed</button>
     </div>
     
     <script src="script.js"></script>

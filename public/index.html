@@ -9,30 +9,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-    <div id="container">
-      <div class="inputContainer" id="scoutName">
-        <h3>Scout Name</h3>
-        <input class="textInput" id="scoutNameInput" placeholder="Scout Name" type="text"></input>
-      </div>
-      <div class="inputContainer" id="teamNumber">
-        <h3>Team Number</h3>
-        <input class="textInput" id="teamNumberInput" placeholder="Team Number" type="number"></input>
-      </div>
-      <div class="inputContainer" id="matchNumber">
-        <h3>Match Number</h3>
-        <input class="textInput" id="matchNumberInput" placeholder="Match Number" type="number"></input>
-      </div>
-      <div class="inputContainer" id="teamColour">
-        <h3>Team Colour</h3>
-        <select  id="teamColourInput" class="textInput">
-          <option value="Red">Red</option>
-          <option value="Blue">Blue</option>
-        </select>
-      </div>
-      <button id="nextButton" class="buttonWithText" onclick="nextPage()">Next Page</button>
-
+    <div class="inputContainer">
+      <h3 class="inputLabel">Scout Name</h3>
+      <input class="textInput" id="scoutNameInput" placeholder="Scout Name" type="text"></input>
     </div>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Team Number</h3>
+      <input class="textInput" id="teamNumberInput" placeholder="Team Number" type="number"></input>
+    </div>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Match Number</h3>
+      <input class="textInput" id="matchNumberInput" placeholder="Match Number" type="number"></input>
+    </div>
+    <div class="inputContainer">
+      <h3 class="inputLabel">Team Colour</h3>
+      <select  id="teamColourInput" class="textInput">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+      </select>
+    </div>
+    <button id="nextButton" class="nextButton" onclick="nextButton()"></button>
+
     
     <script src="script.js"></script>
   </body>

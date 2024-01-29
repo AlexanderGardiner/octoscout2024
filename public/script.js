@@ -10,7 +10,7 @@ localStorage.setItem("ampPieceAuto", 0);
 localStorage.setItem("ampSpeakerPieceAuto", 0);
 localStorage.setItem("failedPieceAuto", 0);
 
-function nextPage() {
+function nextButton() {
   let scoutName = document.getElementById("scoutNameInput").value;
   let teamNumber = document.getElementById("teamNumberInput").value;
   let matchNumber = document.getElementById("matchNumberInput").value;
@@ -19,7 +19,6 @@ function nextPage() {
   localStorage.setItem("teamNumber", teamNumber);
   localStorage.setItem("matchNumber", matchNumber);
   localStorage.setItem("teamColour", teamColour);
-  console.log(localStorage);
   window.location.href = "/initalPosition";
 }
 

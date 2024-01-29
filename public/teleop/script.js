@@ -55,6 +55,10 @@ class Note {
   }
 }
 
-function backButton() {}
+function backButton() {
+  window.location.href = "../auto";
+}
 
-function nextButton() {}
+function nextButton() {
+  window.location.href = "/endgame";
+}

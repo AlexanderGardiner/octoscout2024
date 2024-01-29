@@ -16,15 +16,30 @@
 
 #nextButton {
   bottom: 5vh;
-  background-color: #6cbedc;
+  margin: 0 auto;
+  margin-top: 10vh;
+  display: block;
 }
 
-#nextButton:hover {
-  background-color: #8dc2d6;
+.inputLabel {
+  display: inline;
+  color: white;
+  margin: 1vh;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+input {
+  height: 4vh;
+}
+
+select {
+  height: 4vh;
 }
 
 .inputContainer {
-  display: flex;
-  justify-content: center;
-  position: absolute;
+  position: relative;
+  display: block;
+  margin-top: 10vh;
+  text-align: center;
 }
