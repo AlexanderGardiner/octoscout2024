@@ -1,4 +1,5 @@
 let notes = [];
+
 function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
@@ -85,5 +86,6 @@ function nextButton() {
 
   localStorage.setItem("autoNotesLocations", collectionLocations);
   localStorage.setItem("autoNotesResults", results);
+  localStorage.setItem("mobility",mobilityCheckbox.checked);
   window.location.href = "../teleop";
 }

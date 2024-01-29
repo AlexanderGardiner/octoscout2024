@@ -1,0 +1,13 @@
+#submitButton {
+    margin: 0 auto;
+    display: block;
+    width: 30vw;
+    height: 5vh;
+}
+  
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh;
+}
