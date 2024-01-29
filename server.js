@@ -22,24 +22,30 @@ app.listen(PORT, () => {
 });
 
 function writeDataToCSV(data) {
-  let filePath = 'output.json';
+  let filePath = 'public/output.csv';
   data.timestamp = new Date();
+  const sortedKeys = Object.keys(data).sort();
+
+  // Step 3: Create a new object with sorted keys
+  const sortedData = [];
+  sortedKeys.forEach(key => {
+    sortedData.push('"'+data[key]+'"');
+  });
   fs.readFile(filePath, 'utf8', (err, fileContent) => {
     if (err) throw err;
   
     let output;
   
     if (fileContent.length === 0) {
-      output = '[' + JSON.stringify(data, null, 2) + ']\n';
+      let headers = sortedKeys;
+      output = headers+"\n"+sortedData;
     } else {
-      const existingData = JSON.parse(fileContent);
-      existingData.push(data);
-      output = JSON.stringify(existingData, null, 2) + '\n';
+      output = fileContent + '\n' + sortedData;
     }
   
     fs.writeFile(filePath, output, (err) => {
       if (err) throw err;
-      console.log('Data appended to output.csv.');
+      console.log('Data appended to output.json.');
     });
   });
   

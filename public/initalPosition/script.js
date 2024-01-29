@@ -8,7 +8,7 @@ function selectPosition(position) {
 }
 
 function nextPage() {
-  localStorage.setItem("startingRobotPosition", startingRobotPosition);
+  localStorage.setItem("04startingRobotPosition", startingRobotPosition);
   window.location.href = "../auto";
 }
 

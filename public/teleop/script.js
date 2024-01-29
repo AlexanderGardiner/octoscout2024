@@ -1,13 +1,28 @@
 let notes = [];
+let speakerNotes = 0;
+let ampNotes = 0;
+let ampSpeakerNotes = 0;
+let failedNotes = 0;
+let collectedNotes = 0;
 function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
+  collectedNotes += 1;
 }
 
 function resultPiece(result) {
   console.log(notes);
   notes[notes.length - 1].result = result;
   updateNoteViewer();
+  if (result=="speaker") {
+    speakerNotes += 1;
+  } else if (result=="amp") {
+    ampNotes += 1;
+  } else if (result=="ampSpeaker") {
+    ampSpeakerNotes += 1;
+  }else if (result=="failed") {
+    failedNotes += 1;
+  }
 }
 
 function updateNoteViewer() {
@@ -45,6 +60,7 @@ function updateNoteViewer() {
     note.style.color = "white";
 
     notesContainer.appendChild(noteContainer);
+    
   }
 }
 
@@ -67,7 +83,14 @@ function nextButton() {
     results.push(notes[i].result);
   }
 
-  localStorage.setItem("teleopNotesLocations", collectionLocations);
-  localStorage.setItem("teleopNotesResults", results);
+  localStorage.setItem("17teleopNotesLocations", collectionLocations);
+  localStorage.setItem("18teleopNotesResults", results);
+
+  localStorage.setItem("12teleopCountCollected", collectedNotes);
+  localStorage.setItem("13teleopCountSpeaker", speakerNotes);
+  localStorage.setItem("14teleopCountAmp", ampNotes);
+  localStorage.setItem("15teleopCountAmpSpeaker", ampSpeakerNotes);
+  localStorage.setItem("16teleopCountFailed", failedNotes);
+  
   window.location.href = "../endgame";
 }
