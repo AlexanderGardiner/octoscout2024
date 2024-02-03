@@ -53,66 +53,66 @@
 .noteButton {
   border-radius: 100%;
   position: absolute;
-  width: 2vh;
-  height: 2vh;
+  width: 4vh;
+  height: 4vh;
   z-index: 10;
 }
 
 #middle1Button {
   top: 24vh;
-  left: 2vh;
+  left: 1vh;
   background-color: #acf5b2;
 }
 #middle2Button {
   top: 24vh;
-  left: 6.5vh;
+  left: 5.5vh;
   background-color: #5eff6b;
 }
 #middle3Button {
   top: 24vh;
-  left: 11vh;
+  left: 10vh;
   background-color: #00ff15;
 }
 #middle4Button {
   top: 24vh;
-  left: 15.5vh;
+  left: 14.5vh;
   background-color: #008a0b;
 }
 #middle5Button {
   top: 24vh;
-  left: 20vh;
+  left: 19vh;
   background-color: #004d06;
 }
 
 #close1ButtonBlue {
   top: 9vh;
-  left: 11vh;
+  left: 10vh;
   background-color: #a7b7ff;
 }
 #close2ButtonBlue {
   top: 9vh;
-  left: 15.25vh;
+  left: 14.25vh;
   background-color: #6580fa;
 }
 #close3ButtonBlue {
   top: 9vh;
-  left: 19.5vh;
+  left: 18.5vh;
   background-color: #0050fc;
 }
 
 #close1ButtonRed {
   top: 39vh;
-  left: 11vh;
+  left: 9vh;
   background-color: #ffa7a7;
 }
 #close2ButtonRed {
   top: 39vh;
-  left: 15.25vh;
+  left: 13.25vh;
   background-color: #fa6565;
 }
 #close3ButtonRed {
   top: 39vh;
-  left: 19.5vh;
+  left: 17.5vh;
   background-color: #fc0000;
 }
 

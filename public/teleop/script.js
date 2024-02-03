@@ -2,6 +2,7 @@ let notes = [];
 let speakerNotes = 0;
 let ampNotes = 0;
 let ampSpeakerNotes = 0;
+let trapNotes = 0;
 let failedNotes = 0;
 let collectedNotes = 0;
 function collectPiece(collectionLocation) {
@@ -20,7 +21,9 @@ function resultPiece(result) {
     ampNotes += 1;
   } else if (result=="ampSpeaker") {
     ampSpeakerNotes += 1;
-  }else if (result=="failed") {
+  } else if (result=="trap") {
+    trapNotes += 1;
+  } else if (result=="failed") {
     failedNotes += 1;
   }
 }
@@ -91,6 +94,8 @@ function nextButton() {
   localStorage.setItem("14teleopCountAmp", ampNotes);
   localStorage.setItem("15teleopCountAmpSpeaker", ampSpeakerNotes);
   localStorage.setItem("16teleopCountFailed", failedNotes);
+
+  localStorage.setItem("23trapNotes",trapNotes);
   
   window.location.href = "../endgame";
 }
