@@ -86,3 +86,8 @@
   top: 1vh;
   left: 1vh;
 }
+
+#defenseCheckboxLabel {
+  display: inline;
+  color: white;
+}

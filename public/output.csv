@@ -1,2 +1,2 @@
-00scoutName,24bestTeamInput,25middleTeamInput,26worstTeamInput,timestamp
-"","best","middle","worst","Sun Feb 04 2024 13:31:08 GMT-0800 (Pacific Standard Time)"
+00scoutName,01teamNumber,02matchNumber,03teamColour,04startingRobotPosition,05autoCountCollected,06autoCountSpeaker,07autoCountAmp,08autoCountFailed,09autoMobility,10autoNotesLocations,11autoNotesResults,12teleopCountCollected,13teleopCountSpeaker,14teleopCountAmp,15teleopCountAmpSpeaker,16teleopCountFailed,17teleopNotesLocations,18teleopNotesResults,19endgamePark,20endgameOnstage,21endgameSpotlit,22endgameHarmony,23trapNotes,24bestTeamInput,25middleTeamInput,26worstTeamInput,defenseBot,timestamp
+"","","","Red","bottom","0","0","0","0","false","","","0","0","0","0","0","","","No Attempt","No Attempt","No Attempt","No Attempt","0","","","","true","Sun Feb 04 2024 14:16:38 GMT-0800 (Pacific Standard Time)"

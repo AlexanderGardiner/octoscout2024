@@ -96,6 +96,7 @@ function nextButton() {
   localStorage.setItem("16teleopCountFailed", failedNotes);
 
   localStorage.setItem("23trapNotes", trapNotes);
+  localStorage.setItem("defenseBot", defenseCheckbox.checked);
 
   window.location.href = "../endgame";
 }
