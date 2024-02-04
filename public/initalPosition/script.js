@@ -1,5 +1,5 @@
 let startingRobotPosition = "Not Set";
-if (localStorage.getItem("teamColour") == "Red") {
+if (localStorage.getItem("03teamColour") == "Red") {
   document.getElementById("fieldImage").src = "./redFieldImage.png";
 }
 function selectPosition(position) {

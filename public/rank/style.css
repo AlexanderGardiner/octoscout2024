@@ -1,0 +1,35 @@
+#nextButton {
+  bottom: 5vh;
+  margin: 0 auto;
+  margin-top: 10vh;
+  display: block;
+}
+
+.inputLabel {
+  display: inline;
+  color: #bb9839;
+  margin: 1vh;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+input {
+  height: 4vh;
+}
+
+.inputContainer {
+  position: relative;
+  display: block;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+#backButton {
+  position: absolute;
+  z-index: 10;
+  margin: 3vh auto;
+  display: block;
+  top: 0vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}

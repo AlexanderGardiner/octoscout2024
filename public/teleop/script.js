@@ -9,21 +9,22 @@ function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
   collectedNotes += 1;
+  updateNoteViewer();
 }
 
 function resultPiece(result) {
   console.log(notes);
   notes[notes.length - 1].result = result;
   updateNoteViewer();
-  if (result=="speaker") {
+  if (result == "speaker") {
     speakerNotes += 1;
-  } else if (result=="amp") {
+  } else if (result == "amp") {
     ampNotes += 1;
-  } else if (result=="ampSpeaker") {
+  } else if (result == "ampSpeaker") {
     ampSpeakerNotes += 1;
-  } else if (result=="trap") {
+  } else if (result == "trap") {
     trapNotes += 1;
-  } else if (result=="failed") {
+  } else if (result == "failed") {
     failedNotes += 1;
   }
 }
@@ -63,7 +64,6 @@ function updateNoteViewer() {
     note.style.color = "white";
 
     notesContainer.appendChild(noteContainer);
-    
   }
 }
 
@@ -95,7 +95,7 @@ function nextButton() {
   localStorage.setItem("15teleopCountAmpSpeaker", ampSpeakerNotes);
   localStorage.setItem("16teleopCountFailed", failedNotes);
 
-  localStorage.setItem("23trapNotes",trapNotes);
-  
+  localStorage.setItem("23trapNotes", trapNotes);
+
   window.location.href = "../endgame";
 }

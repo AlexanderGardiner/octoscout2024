@@ -7,17 +7,18 @@ function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
   collectedNotes += 1;
+  updateNoteViewer();
 }
 
 function resultPiece(result) {
   console.log(notes);
   notes[notes.length - 1].result = result;
   updateNoteViewer();
-  if (result=="speaker") {
+  if (result == "speaker") {
     speakerNotes += 1;
-  } else if (result=="amp") {
+  } else if (result == "amp") {
     ampNotes += 1;
-  } else if (result=="failed") {
+  } else if (result == "failed") {
     failedNotes += 1;
   }
 }
@@ -73,7 +74,6 @@ function updateNoteViewer() {
     note.style.color = "black";
 
     notesContainer.appendChild(noteContainer);
-    
   }
 }
 
@@ -96,15 +96,14 @@ function nextButton() {
     results.push(notes[i].result);
   }
 
-  localStorage.setItem("09autoMobility",mobilityCheckbox.checked);
+  localStorage.setItem("09autoMobility", mobilityCheckbox.checked);
   localStorage.setItem("10autoNotesLocations", collectionLocations);
   localStorage.setItem("11autoNotesResults", results);
-  
+
   localStorage.setItem("05autoCountCollected", collectedNotes);
   localStorage.setItem("06autoCountSpeaker", speakerNotes);
   localStorage.setItem("07autoCountAmp", ampNotes);
   localStorage.setItem("08autoCountFailed", failedNotes);
-  
 
   window.location.href = "../teleop";
 }
