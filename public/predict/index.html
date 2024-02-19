@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../globalStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="title">Predict Match</h1>
+    <div id="leftContainer" class="teamInputContainer">
+        <div id="blueInputs">
+            <h1 class="allianceTitle">Blue Alliance</h1>
+            <input id="blueTeam1" class="teamInput" oninput="updateData()"></input>
+            <br>
+            <input id="blueTeam2" class="teamInput" oninput="updateData()"></input>
+            <br>
+            <input id="blueTeam3" class="teamInput" oninput="updateData()"></input>
+        </div>
+    </div>
+    <div id="rightContainer" class="teamInputContainer">
+        <div id="redInputs">
+            <h1 class="allianceTitle">Red Alliance</h1>
+            <input id="redTeam1" class="teamInput" oninput="updateData()"></input>
+            <br>
+            <input id="redTeam2" class="teamInput" oninput="updateData()"></input>
+            <br>
+            <input id="redTeam3"class="teamInput" oninput="updateData()"></input>
+        </div>
+    </div>
+    <div id="chartContainer" style="height: 300px; width: 60%;">
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.canvasjs.com/canvasjs.min.js"
+    ></script>
+    <script src="script.js"></script>
+    <script src="eloRanker.js"></script>
+  </body>
+</html>

@@ -17,6 +17,49 @@ function displayData(data) {
   sectionTitle.style.color = "white";
   tempDiv.appendChild(sectionTitle);
   document.getElementById("graphContainer").appendChild(tempDiv);
+  drawMetric(
+    data,
+    "Total Pieces",
+    [
+      "06autoCountSpeaker",
+      "07autoCountAmp",
+      "13teleopCountSpeaker",
+      "14teleopCountAmp",
+      "15teleopCountAmpSpeaker",
+      "23trapNotes",
+    ],
+    [1, 1, 1, 1, 1, 1],
+    [],
+    [],
+    [],
+    "Match Played",
+    "Pieces"
+  );
+
+  drawMetric(
+    data,
+    "Total Points",
+    [
+      "06autoCountSpeaker",
+      "07autoCountAmp",
+      "13teleopCountSpeaker",
+      "14teleopCountAmp",
+      "15teleopCountAmpSpeaker",
+      "23trapNotes",
+    ],
+    [5, 2, 2, 1, 5, 5],
+    [
+      "09autoMobility",
+      "19endgamePark",
+      "20endgameOnstage",
+      "21endgameSpotlit",
+      "22endgameHarmony",
+    ],
+    [true, "Successful", "Successful", "Successful", "Successful"],
+    [2, 1, 3, 1, 2],
+    "Match Played",
+    "Pieces"
+  );
   tempDiv = document.createElement("div");
   tempDiv.style.width = "100%";
   tempDiv.style.height = "40px";
@@ -308,7 +351,7 @@ function makeLineChart(data, chartName, axisXLabel, axisYLabel) {
     },
     data: [
       {
-        type: "line",
+        type: "spline",
 
         dataPoints: data,
       },

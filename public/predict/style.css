@@ -1,0 +1,45 @@
+.teamInputContainer {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+}
+
+#rightContainer {
+  width: 50%;
+  text-align: right;
+  float: right;
+}
+#leftContainer {
+  width: 50%;
+  text-align: left;
+  float: left;
+}
+
+.teamInput {
+  height: 100px;
+  width: 20%;
+  margin: 20px;
+  font-size: 90px;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  margin: 40px;
+}
+
+#chartContainer {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.allianceTitle {
+  margin-left: 40px;
+  margin-right: 40px;
+  color: white;
+}
