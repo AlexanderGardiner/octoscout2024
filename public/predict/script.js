@@ -798,6 +798,10 @@ function csvJSON(csv) {
   return result;
 }
 
+function back() {
+  window.location.href = "../dataAnalysis";
+}
+
 function quartiles(values) {
   // Make a copy of the array to avoid altering the original
   var sortedValues = values.slice().sort((a, b) => a - b);

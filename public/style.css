@@ -43,3 +43,10 @@ select {
   margin-top: 10vh;
   text-align: center;
 }
+
+#dataAnalysisButton {
+  width: 10vh;
+  height: 4vh;
+  margin: 1vh;
+  display: block;
+}

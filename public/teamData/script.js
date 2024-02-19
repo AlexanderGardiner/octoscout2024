@@ -1,11 +1,24 @@
 let team = new URL(window.location).searchParams.get("team");
-fetch("../output.csv")
-  .then(function (response) {
-    return response.text();
-  })
-  .then(function (data) {
-    displayData(csvJSON(data));
-  });
+document.getElementById("selectedTeam").value = team;
+function updateTeam() {
+  document.getElementById("graphContainer").innerHTML = "";
+  var queryParams = new URLSearchParams(window.location.search);
+  queryParams.set("team", document.getElementById("selectedTeam").value);
+  history.replaceState(null, null, "?" + queryParams.toString());
+  team = new URL(window.location).searchParams.get("team");
+  fetch("../output.csv")
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (data) {
+      displayData(csvJSON(data));
+    });
+}
+updateTeam();
+
+function back() {
+  window.location.href = "../dataAnalysis";
+}
 
 function displayData(data) {
   tempDiv = document.createElement("div");

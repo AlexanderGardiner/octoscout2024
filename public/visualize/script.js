@@ -209,6 +209,10 @@ function displayData(data) {
   makeGraph("23trapNotes", data, "Trap Scores Teleop", "Points", 5);
 }
 
+function back() {
+  window.location.href = "../dataAnalysis";
+}
+
 function makeEloGraph(eloData) {
   let eloDataPoints = [];
   let eloDataKeys = Object.keys(eloData);

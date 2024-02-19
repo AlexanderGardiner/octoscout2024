@@ -6,3 +6,9 @@
   width: 100%;
   left: 0px;
 }
+
+#backButton {
+  width: 5vh;
+  height: 2vh;
+  margin: 1vh;
+}

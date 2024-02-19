@@ -6,3 +6,18 @@
   width: 100%;
   left: 0px;
 }
+
+#selectedTeam {
+  text-align: center;
+  margin: 20px auto;
+  width: 20vh;
+  height: 5vh;
+  font-size: 4.5vh;
+  display: block;
+}
+
+#backButton {
+  width: 5vh;
+  height: 2vh;
+  margin: 1vh;
+}

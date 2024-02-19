@@ -16,3 +16,7 @@ function nextButton() {
 window.onload = () => {
   document.getElementById("scoutNameInput").value = scoutName;
 };
+
+function dataAnalysis() {
+  window.location.href = "./dataAnalysis";
+}
