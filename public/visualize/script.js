@@ -19,7 +19,7 @@ function displayData(data) {
   makeEloGraph(calculateElos(data));
   makeCompositeGraph(
     data,
-    "Total points",
+    "Total Points",
     "Points",
     [
       "06autoCountSpeaker",
@@ -29,7 +29,7 @@ function displayData(data) {
       "15teleopCountAmpSpeaker",
       "23trapNotes",
     ],
-    [5, 2, 1, 2, 5, 5],
+    [5, 2, 2, 1, 5, 5],
     [
       "09autoMobility",
       "19endgamePark",
@@ -43,7 +43,7 @@ function displayData(data) {
   makeCompositeGraph(
     data,
     "Total Pieces",
-    "Points",
+    "Pieces",
     [
       "06autoCountSpeaker",
       "07autoCountAmp",
@@ -66,9 +66,29 @@ function displayData(data) {
   sectionTitle.style.color = "white";
   tempDiv.appendChild(sectionTitle);
   document.getElementById("graphContainer").appendChild(tempDiv);
+  makeCompositeGraph(
+    data,
+    "Auto Points",
+    "Points",
+    ["06autoCountSpeaker", "07autoCountAmp"],
+    [5, 2],
+    ["09autoMobility"],
+    ["true"],
+    [2]
+  );
+  makeCompositeGraph(
+    data,
+    "Auto Pieces",
+    "Pieces",
+    ["06autoCountSpeaker", "07autoCountAmp"],
+    [1, 1],
+    [],
+    [],
+    []
+  );
   makeGraph("05autoCountCollected", data, "Auto Collected", "Pieces", 1);
-  makeGraph("06autoCountSpeaker", data, "Speaker Scores Auto", "Points", 5);
-  makeGraph("07autoCountAmp", data, "Amp Scores Auto", "Points", 2);
+  makeGraph("06autoCountSpeaker", data, "Speaker Points Auto", "Points", 5);
+  makeGraph("07autoCountAmp", data, "Amp Points Auto", "Points", 2);
   makeGraph("08autoCountFailed", data, "Failed Auto", "Pieces", 1);
   makeGraphOneTimePoints(
     "09autoMobility",
@@ -87,13 +107,38 @@ function displayData(data) {
   tempDiv.style.height = "40px";
   tempDiv.style.textAlign = "center";
   document.getElementById("graphContainer").appendChild(tempDiv);
+  makeCompositeGraph(
+    data,
+    "Points Teleop",
+    "Points",
+    ["13teleopCountSpeaker", "14teleopCountAmp", "15teleopCountAmpSpeaker"],
+    [2, 1, 5, 5],
+    [],
+    [],
+    []
+  );
+  makeCompositeGraph(
+    data,
+    "Teleop Pieces",
+    "Pieces",
+    [
+      "13teleopCountSpeaker",
+      "14teleopCountAmp",
+      "15teleopCountAmpSpeaker",
+      "23trapNotes",
+    ],
+    [1, 1, 1, 1, 1, 1],
+    [],
+    [],
+    []
+  );
   makeGraph("12teleopCountCollected", data, "Collected Teleop", "Pieces", 1);
-  makeGraph("13teleopCountSpeaker", data, "Speaker Scores Teleop", "Points", 2);
-  makeGraph("14teleopCountAmp", data, "Amp Scores Teleop", "Points", 1);
+  makeGraph("13teleopCountSpeaker", data, "Speaker Points Teleop", "Points", 2);
+  makeGraph("14teleopCountAmp", data, "Amp Points Teleop", "Points", 1);
   makeGraph(
     "15teleopCountAmpSpeaker",
     data,
-    "Amplified Speaker Scores Teleop",
+    "Amplified Speaker Points Teleop",
     "Points",
     5
   );
@@ -107,6 +152,31 @@ function displayData(data) {
   sectionTitle.style.color = "white";
   tempDiv.appendChild(sectionTitle);
   document.getElementById("graphContainer").appendChild(tempDiv);
+  makeCompositeGraph(
+    data,
+    "Endgame Points",
+    "Points",
+    ["23trapNotes"],
+    [5],
+    [
+      "19endgamePark",
+      "20endgameOnstage",
+      "21endgameSpotlit",
+      "22endgameHarmony",
+    ],
+    ["Successful", "Successful", "Successful", "Successful"],
+    [1, 3, 1, 2]
+  );
+  makeCompositeGraph(
+    data,
+    "Endgame Pieces",
+    "Pieces",
+    ["23trapNotes"],
+    [1],
+    [],
+    [],
+    []
+  );
   makeGraphOneTimePoints(
     "19endgamePark",
     data,
