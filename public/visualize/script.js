@@ -112,7 +112,7 @@ function displayData(data) {
     "Points Teleop",
     "Points",
     ["13teleopCountSpeaker", "14teleopCountAmp", "15teleopCountAmpSpeaker"],
-    [2, 1, 5, 5],
+    [2, 1, 5],
     [],
     [],
     []
@@ -121,13 +121,8 @@ function displayData(data) {
     data,
     "Teleop Pieces",
     "Pieces",
-    [
-      "13teleopCountSpeaker",
-      "14teleopCountAmp",
-      "15teleopCountAmpSpeaker",
-      "23trapNotes",
-    ],
-    [1, 1, 1, 1, 1, 1],
+    ["13teleopCountSpeaker", "14teleopCountAmp", "15teleopCountAmpSpeaker"],
+    [1, 1, 1, 1],
     [],
     [],
     []

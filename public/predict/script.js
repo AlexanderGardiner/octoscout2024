@@ -112,7 +112,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -171,7 +171,7 @@ function drawData(data) {
 
   redTeam1Data.push({
     label: "Endgame Points",
-    y: getMeanTeamPoints(
+    y: getMedianTeamPoints(
       redTeam1,
       data,
       ["23trapNotes"],
@@ -212,7 +212,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -237,7 +237,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -250,7 +250,7 @@ function drawData(data) {
       ["06autoCountSpeaker", "07autoCountAmp"],
       [5, 2],
       ["09autoMobility"],
-      [true],
+      ["true"],
       [2]
     ),
   });
@@ -270,7 +270,7 @@ function drawData(data) {
 
   redTeam2Data.push({
     label: "Endgame Points",
-    y: getMeanTeamPoints(
+    y: getMedianTeamPoints(
       redTeam2,
       data,
       ["23trapNotes"],
@@ -311,7 +311,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -336,7 +336,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -349,7 +349,7 @@ function drawData(data) {
       ["06autoCountSpeaker", "07autoCountAmp"],
       [5, 2],
       ["09autoMobility"],
-      [true],
+      ["true"],
       [2]
     ),
   });
@@ -369,7 +369,7 @@ function drawData(data) {
 
   redTeam3Data.push({
     label: "Endgame Points",
-    y: getMeanTeamPoints(
+    y: getMedianTeamPoints(
       redTeam3,
       data,
       ["23trapNotes"],
@@ -410,7 +410,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -435,7 +435,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -448,7 +448,7 @@ function drawData(data) {
       ["06autoCountSpeaker", "07autoCountAmp"],
       [5, 2],
       ["09autoMobility"],
-      [true],
+      ["true"],
       [2]
     ),
   });
@@ -468,7 +468,7 @@ function drawData(data) {
 
   blueTeam1Data.push({
     label: "Endgame Points",
-    y: getMeanTeamPoints(
+    y: getMedianTeamPoints(
       blueTeam1,
       data,
       ["23trapNotes"],
@@ -508,7 +508,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -533,7 +533,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -546,7 +546,7 @@ function drawData(data) {
       ["06autoCountSpeaker", "07autoCountAmp"],
       [5, 2],
       ["09autoMobility"],
-      [true],
+      ["true"],
       [2]
     ),
   });
@@ -565,7 +565,7 @@ function drawData(data) {
   });
   blueTeam2Data.push({
     label: "Endgame Points",
-    y: getMeanTeamPoints(
+    y: getMedianTeamPoints(
       blueTeam2,
       data,
       ["23trapNotes"],
@@ -605,7 +605,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -630,7 +630,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
@@ -642,7 +642,7 @@ function drawData(data) {
       ["06autoCountSpeaker", "07autoCountAmp"],
       [5, 2],
       ["09autoMobility"],
-      [true],
+      ["true"],
       [2]
     ),
   });
@@ -661,7 +661,7 @@ function drawData(data) {
   });
   blueTeam3Data.push({
     label: "Endgame Points",
-    y: getMeanTeamPoints(
+    y: getMedianTeamPoints(
       blueTeam3,
       data,
       ["23trapNotes"],

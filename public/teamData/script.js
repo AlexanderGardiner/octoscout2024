@@ -261,7 +261,7 @@ function displayData(data) {
     data,
     "Total Points Endgame",
     ["23trapNotes"],
-    [1],
+    [5],
     [
       "19endgamePark",
       "20endgameOnstage",
