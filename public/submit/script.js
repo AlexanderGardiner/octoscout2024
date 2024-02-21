@@ -16,3 +16,12 @@ async function submit() {
 function scoutAgain() {
   window.location.href = "../";
 }
+
+function downloadJSON() {
+  var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(localStorage));
+  var dlAnchorElem = document.createElement("a");
+  document.body.appendChild(dlAnchorElem);
+  dlAnchorElem.setAttribute("href",     dataStr     );
+  dlAnchorElem.setAttribute("download", "Data.json");
+  dlAnchorElem.click();
+}
