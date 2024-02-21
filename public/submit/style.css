@@ -4,6 +4,13 @@
     width: 30vw;
     height: 5vh;
 }
+
+#scoutAgain {
+    margin: 0 auto;
+    display: block;
+    width: 30vw;
+    height: 5vh;
+}
   
 #container {
     display: flex;

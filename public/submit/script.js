@@ -7,4 +7,12 @@ async function submit() {
       },
       body: JSON.stringify(localStorage),
     });
+    if (response.status == 200) {
+      alert("Match Submitted");
+    }
+   
+}
+
+function scoutAgain() {
+  window.location.href = "../";
 }

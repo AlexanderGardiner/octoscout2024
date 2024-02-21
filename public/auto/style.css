@@ -22,6 +22,7 @@
   border-radius: 1vh;
   text-align: center;
   overflow: scroll;
+  max-width: 50vw;
 }
 
 #notesViewerTitle {
@@ -48,6 +49,7 @@
   margin: 1vh;
   text-align: center;
   width: 100vw;
+  max-height: 30vh;
 }
 
 .noteButton {
@@ -122,8 +124,8 @@
 }
 
 .placementButton {
-  width: 12vh;
-  height: 12vh;
+  width: 15vh;
+  height: 9vh;
   z-index: 10;
   bottom: 30vh;
   margin: 1vh;

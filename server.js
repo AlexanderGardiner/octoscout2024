@@ -13,6 +13,8 @@ app.use(express.static("public"));
 app.post("/submitData", (req, res) => {
   console.log(req.body);
   writeDataToCSV(req.body);
+  res.status(200);
+  res.send();
 });
 const PORT = process.env.PORT || 80;
 app.listen(PORT, () => {

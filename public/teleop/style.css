@@ -48,6 +48,7 @@
   margin: 1vh;
   text-align: center;
   width: 100vw;
+  max-height: 30vh;
 }
 
 .collectionButton {
@@ -71,8 +72,8 @@
 }
 
 .placementButton {
-  width: 12vh;
-  height: 12vh;
+  width: 15vh;
+  height: 9vh;
   z-index: 10;
   bottom: 30vh;
   margin: 1vh;
