@@ -25,3 +25,13 @@
     justify-content: center; 
     height: 100vh;
 }
+
+#backButton {
+    position: absolute;
+    z-index: 10;
+    margin: 3vh auto;
+    display: block;
+    top: 0vh;
+    left: 50vw;
+    transform: translateX(-50%);
+  }

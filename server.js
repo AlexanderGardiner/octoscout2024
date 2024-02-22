@@ -16,9 +16,9 @@ app.post("/submitData", (req, res) => {
   res.status(200);
   res.send();
 });
-const PORT = process.env.PORT || 80;
+const PORT = 9084;
 app.listen(PORT, () => {
-  console.log("App is listening on port 80");
+  console.log("App is listening on port 9084");
 });
 
 function writeDataToCSV(data) {

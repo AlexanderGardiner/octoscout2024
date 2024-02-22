@@ -25,3 +25,7 @@ function downloadJSON() {
   dlAnchorElem.setAttribute("download", "Data.json");
   dlAnchorElem.click();
 }
+
+function backButton() {
+  window.location.href = "../rank";
+}

@@ -100,3 +100,19 @@ function nextButton() {
 
   window.location.href = "../endgame";
 }
+
+loadPreviousData();
+
+function loadPreviousData() {
+  let noteLocations = localStorage.getItem("17teleopNotesLocations").split(',');;
+  let noteResults = localStorage.getItem("18teleopNotesResults").split(',');;
+  for (let i = 0; i < noteLocations.length; i++) {
+    collectPiece(noteLocations[i]);
+    resultPiece(noteResults[i]);
+  }
+  if (localStorage.getItem("defenseBot")=="true") {
+    defenseCheckbox.checked = true;
+  } else {
+    defenseCheckbox.checked = false;
+  }
+}

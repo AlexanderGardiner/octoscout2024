@@ -11,7 +11,9 @@ function nextButton() {
 function backButton() {
   window.location.href = "/endgame";
 }
-
-window.onload = () => {
-  document.getElementById("scoutNameInput").value = scoutName;
-};
+loadPreviousData();
+function loadPreviousData() {
+  document.getElementById("bestTeamInput").value = localStorage.getItem("24bestTeamInput");
+  document.getElementById("middleTeamInput").value = localStorage.getItem("25middleTeamInput");
+  document.getElementById("worstTeamInput").value = localStorage.getItem("26worstTeamInput");
+}

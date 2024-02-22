@@ -107,3 +107,19 @@ function nextButton() {
 
   window.location.href = "../teleop";
 }
+loadPreviousData();
+
+function loadPreviousData() {
+  let noteLocations = localStorage.getItem("10autoNotesLocations").split(',');;
+  let noteResults = localStorage.getItem("11autoNotesResults").split(',');;
+  for (let i = 0; i < noteLocations.length; i++) {
+    collectPiece(noteLocations[i]);
+    resultPiece(noteResults[i]);
+  }
+  if (localStorage.getItem("09autoMobility")=="true") {
+    mobilityCheckbox.checked = true;
+  } else {
+    mobilityCheckbox.checked = false;
+  }
+}
+
