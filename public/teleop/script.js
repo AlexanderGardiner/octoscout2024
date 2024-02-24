@@ -12,9 +12,10 @@ function collectPiece(collectionLocation) {
   updateNoteViewer();
 }
 
-function resultPiece(result) {
+function resultPiece(result, timestamp) {
   console.log(notes);
   notes[notes.length - 1].result = result;
+  notes[notes.length - 1].timestamp = timestamp;
   updateNoteViewer();
   if (result == "speaker") {
     speakerNotes += 1;
@@ -81,13 +82,16 @@ function backButton() {
 function nextButton() {
   let collectionLocations = [];
   let results = [];
+  let timestamps = [];
   for (let i = 0; i < notes.length; i++) {
     collectionLocations.push(notes[i].collectionLocation);
     results.push(notes[i].result);
+    timestamps.push(notes[i].timestamp);
   }
 
   localStorage.setItem("17teleopNotesLocations", collectionLocations);
   localStorage.setItem("18teleopNotesResults", results);
+  localStorage.setItem("28teleopNotesTimestamps", timestamps);
 
   localStorage.setItem("12teleopCountCollected", collectedNotes);
   localStorage.setItem("13teleopCountSpeaker", speakerNotes);
@@ -104,13 +108,16 @@ function nextButton() {
 loadPreviousData();
 
 function loadPreviousData() {
-  let noteLocations = localStorage.getItem("17teleopNotesLocations").split(',');;
-  let noteResults = localStorage.getItem("18teleopNotesResults").split(',');;
+  let noteLocations = localStorage.getItem("17teleopNotesLocations").split(",");
+  let noteResults = localStorage.getItem("18teleopNotesResults").split(",");
+  let noteTimestamps = localStorage
+    .getItem("28teleopNotesTimestamps")
+    .split(",");
   for (let i = 0; i < noteLocations.length; i++) {
     collectPiece(noteLocations[i]);
-    resultPiece(noteResults[i]);
+    resultPiece(noteResults[i], noteTimestamps[i]);
   }
-  if (localStorage.getItem("defenseBot")=="true") {
+  if (localStorage.getItem("defenseBot") == "true") {
     defenseCheckbox.checked = true;
   } else {
     defenseCheckbox.checked = false;

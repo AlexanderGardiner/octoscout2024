@@ -10,9 +10,10 @@ function collectPiece(collectionLocation) {
   updateNoteViewer();
 }
 
-function resultPiece(result) {
+function resultPiece(result, timestamp) {
   console.log(notes);
   notes[notes.length - 1].result = result;
+  notes[notes.length - 1].timestamp = timestamp;
   updateNoteViewer();
   if (result == "speaker") {
     speakerNotes += 1;
@@ -91,14 +92,17 @@ function backButton() {
 function nextButton() {
   let collectionLocations = [];
   let results = [];
+  let timestamps = [];
   for (let i = 0; i < notes.length; i++) {
     collectionLocations.push(notes[i].collectionLocation);
     results.push(notes[i].result);
+    timestamps.push(notes[i].timestamp);
   }
 
   localStorage.setItem("09autoMobility", mobilityCheckbox.checked);
   localStorage.setItem("10autoNotesLocations", collectionLocations);
   localStorage.setItem("11autoNotesResults", results);
+  localStorage.setItem("27autoNotesTimestamps", timestamps);
 
   localStorage.setItem("05autoCountCollected", collectedNotes);
   localStorage.setItem("06autoCountSpeaker", speakerNotes);
@@ -110,16 +114,16 @@ function nextButton() {
 loadPreviousData();
 
 function loadPreviousData() {
-  let noteLocations = localStorage.getItem("10autoNotesLocations").split(',');;
-  let noteResults = localStorage.getItem("11autoNotesResults").split(',');;
+  let noteLocations = localStorage.getItem("10autoNotesLocations").split(",");
+  let noteResults = localStorage.getItem("11autoNotesResults").split(",");
+  let noteTimestamps = localStorage.getItem("27autoNotesTimestamps").split(",");
   for (let i = 0; i < noteLocations.length; i++) {
     collectPiece(noteLocations[i]);
-    resultPiece(noteResults[i]);
+    resultPiece(noteResults[i], noteTimestamps[i]);
   }
-  if (localStorage.getItem("09autoMobility")=="true") {
+  if (localStorage.getItem("09autoMobility") == "true") {
     mobilityCheckbox.checked = true;
   } else {
     mobilityCheckbox.checked = false;
   }
 }
-
