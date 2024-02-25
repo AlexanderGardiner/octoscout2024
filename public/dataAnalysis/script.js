@@ -14,3 +14,7 @@ function specificTeam() {
 function scout() {
   window.location.href = "../";
 }
+function specificTeamAuto() {
+  window.location.href =
+    "../teamAutos?team=" + document.getElementById("selectedTeam").value;
+}
