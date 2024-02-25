@@ -16,20 +16,6 @@ function updateTeam() {
 }
 updateTeam();
 
-let notesLocations = {
-  close1Blue: { x: 230, y: 190 },
-  close2Blue: { x: 310, y: 190 },
-  close3Blue: { x: 380, y: 190 },
-  close1Red: { x: 230, y: 775 },
-  close2Red: { x: 310, y: 775 },
-  close3Red: { x: 380, y: 775 },
-  middle1: { x: 50, y: 480 },
-  middle2: { x: 140, y: 480 },
-  middle3: { x: 230, y: 480 },
-  middle4: { x: 320, y: 480 },
-  middle5: { x: 410, y: 480 },
-};
-
 function displayData(data) {
   for (let i = 0; i < data.length; i++) {
     if (data[i]["01teamNumber"] == team) {
@@ -67,6 +53,22 @@ function displayData(data) {
       } else {
         startingY = 50;
       }
+
+      let notesLocations = {
+        startingNote: { x: startingX, y: startingY },
+        droppedNote: { x: startingX, y: startingY },
+        close1Blue: { x: 230, y: 190 },
+        close2Blue: { x: 310, y: 190 },
+        close3Blue: { x: 380, y: 190 },
+        close1Red: { x: 230, y: 775 },
+        close2Red: { x: 310, y: 775 },
+        close3Red: { x: 380, y: 775 },
+        middle1: { x: 50, y: 480 },
+        middle2: { x: 140, y: 480 },
+        middle3: { x: 230, y: 480 },
+        middle4: { x: 320, y: 480 },
+        middle5: { x: 410, y: 480 },
+      };
       let colors = generateColors(
         "#FFFFFF",
         "#000000",

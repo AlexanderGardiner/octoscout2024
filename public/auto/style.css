@@ -124,7 +124,19 @@
 }
 
 #startingButton {
-  left: 20vh;
+  border-radius: 0%;
+  width: 100px;
+  margin: 10px;
+  background-color: #4f4425;
+  height: 20px;
+}
+
+#droppedButton {
+  border-radius: 0%;
+  width: 100px;
+  margin: 10px;
+  background-color: #bfb089;
+  height: 20px;
 }
 .placementButton {
   width: 15vh;

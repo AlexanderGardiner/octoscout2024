@@ -22,6 +22,7 @@ app.listen(PORT, () => {
 });
 
 function writeDataToCSV(data) {
+  backupJSON(data);
   let filePath = "public/output.csv";
   data.timestamp = new Date();
   const sortedKeys = Object.keys(data).sort();
@@ -48,5 +49,33 @@ function writeDataToCSV(data) {
       if (err) throw err;
       console.log("Data appended to output.json.");
     });
+  });
+}
+
+function backupJSON(data) {
+  // Get the current date and time
+  const currentDateTime = new Date();
+
+  // Format the date and time components
+  const year = currentDateTime.getFullYear();
+  const month = String(currentDateTime.getMonth() + 1).padStart(2, "0");
+  const day = String(currentDateTime.getDate()).padStart(2, "0");
+  const hours = String(currentDateTime.getHours()).padStart(2, "0");
+  const minutes = String(currentDateTime.getMinutes()).padStart(2, "0");
+  const seconds = String(currentDateTime.getSeconds()).padStart(2, "0");
+
+  // Construct the human-readable formatted date and time
+  const formattedDateTime = `${year}-${month}-${day}_${hours}-${minutes}-${seconds}`;
+  const filename =
+    "./JSONBackups/" + formattedDateTime + "-" + data["00scoutName"];
+
+  const jsonString = JSON.stringify(data);
+
+  fs.writeFile(filename, jsonString, (err) => {
+    if (err) {
+      console.error("Error writing JSON file:", err);
+      return;
+    }
+    console.log("JSON file has been saved:", filename);
   });
 }
