@@ -32,8 +32,10 @@
       <button id="close1ButtonRed" class="noteButton" onclick="collectPiece('close1Red')"></button>
       <button id="close2ButtonRed" class="noteButton" onclick="collectPiece('close2Red')"></button>
       <button id="close3ButtonRed" class="noteButton" onclick="collectPiece('close3Red')"></button>
+      
 
       <h3 id="mobilityCheckboxLabel">Mobility: </h3>
+      <button id="startingButton" class="noteButton" onclick="collectPiece('startingNote')"></button>
       <input type="checkbox" id="mobilityCheckbox">
       
     </div>
@@ -42,6 +44,7 @@
       <button class="placementButton" onclick="resultPiece('amp',Date.now())">Amp</button>
       <br>
       <button class="placementButton" onclick="resultPiece('failed',Date.now())">Failed</button>
+      <button class="placementButton" onclick="resultPiece('intentionalDrop',Date.now())">Intentional Drop</button>
     </div>
     
     <script src="script.js"></script>

@@ -20,14 +20,19 @@
 }
 
 #topRobotButton {
-  top: 30vh;
+  top: 20vh;
 }
 
 #middleRobotButton {
-  top: 42vh;
+  top: 32.5vh;
 }
 #bottomRobotButton {
-  top: 70vh;
+  top: 60vh;
+}
+
+#noShowButton {
+  top: 90vh;
+  background-color: red;
 }
 
 #fieldContainer {

@@ -71,6 +71,8 @@ function updateNoteViewer() {
       note.style.backgroundColor = "#fa6565";
     } else if (notes[i].collectionLocation == "close3Red") {
       note.style.backgroundColor = "#fc0000";
+    } else if (notes[i].collectionLocation == "startingNote") {
+      note.style.backgroundColor = "#f0c54f";
     }
     note.style.color = "black";
 

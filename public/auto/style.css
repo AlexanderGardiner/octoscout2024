@@ -123,6 +123,9 @@
   color: white;
 }
 
+#startingButton {
+  left: 20vh;
+}
 .placementButton {
   width: 15vh;
   height: 9vh;

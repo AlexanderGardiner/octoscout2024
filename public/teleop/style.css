@@ -63,6 +63,9 @@
   top: 10vh;
 }
 
+#startingButton {
+  left: 0vh;
+}
 #middleButton {
   top: 21vh;
 }
