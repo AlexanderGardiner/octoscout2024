@@ -151,7 +151,7 @@ function drawData(data) {
       ["06autoCountSpeaker", "07autoCountAmp"],
       [5, 2],
       ["09autoMobility"],
-      [true],
+      ["true"],
       [2]
     ),
   });
