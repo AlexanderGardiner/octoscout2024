@@ -138,7 +138,7 @@ function drawData(data) {
         "21endgameSpotlit",
         "22endgameHarmony",
       ],
-      [true, "Successful", "Successful", "Successful", "Successful"],
+      ["true", "Successful", "Successful", "Successful", "Successful"],
       [2, 1, 3, 1, 2]
     ),
   });
