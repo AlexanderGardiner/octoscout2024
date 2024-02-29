@@ -68,7 +68,7 @@ function displayData(data) {
       "21endgameSpotlit",
       "22endgameHarmony",
     ],
-    [true, "Successful", "Successful", "Successful", "Successful"],
+    ["true", "Successful", "Successful", "Successful", "Successful"],
     [2, 1, 3, 1, 2],
     "Match Played",
     "Pieces"
@@ -100,7 +100,7 @@ function displayData(data) {
     ["06autoCountSpeaker", "07autoCountAmp"],
     [5, 2],
     ["09autoMobility"],
-    [true],
+    ["true"],
     [2],
     "Match Played",
     "Pieces"
