@@ -6,6 +6,7 @@ let collectedNotes = 0;
 function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
+  if (collectionLocation=="")
   collectedNotes += 1;
   updateNoteViewer();
 }
@@ -19,7 +20,11 @@ function resultPiece(result, timestamp) {
     speakerNotes += 1;
   } else if (result == "amp") {
     ampNotes += 1;
-  } else if (result == "failed") {
+  } else if (result == "failedSpeaker") {
+    failedNotes += 1;
+  } else if (result == "failedAmps") {
+    failedNotes += 1;
+  } else if (result == "failedPickup") {
     failedNotes += 1;
   }
 }

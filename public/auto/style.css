@@ -43,14 +43,6 @@
   width: 50%;
 }
 
-#bottomContainer {
-  position: absolute;
-  bottom: 2vh;
-  margin: 1vh;
-  text-align: center;
-  width: 100vw;
-  max-height: 30vh;
-}
 
 .noteButton {
   border-radius: 100%;
@@ -140,10 +132,10 @@
 }
 .placementButton {
   width: 15vh;
-  height: 9vh;
+  height: 3vh;
   z-index: 10;
   bottom: 30vh;
-  margin: 1vh;
+  margin: 0.5vh;
   left: 15vw;
 }
 #field {
@@ -152,4 +144,13 @@
   border-radius: 1vh;
   top: 1vh;
   left: 1vh;
+}
+
+#bottomContainer {
+  position: absolute;
+  bottom: 2vh;
+  margin: 1vh;
+  text-align: center;
+  width: 100vw;
+  max-height: 25vh;
 }
