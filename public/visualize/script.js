@@ -242,6 +242,10 @@ function makeEloGraph(eloData) {
         dataPoints: eloDataPoints,
       },
     ],
+    axisX: {
+      interval: 1,
+      labelAutoFit: false,
+    },
   });
   chart.render();
 }
@@ -278,6 +282,10 @@ function makeBoxAndWhiskerGraph(dataPoints, meanPoints, chartName, yLable) {
         dataPoints: meanPoints,
       },
     ],
+    axisX: {
+      interval: 1,
+      labelAutoFit: false,
+    },
   });
   chart.render();
 }

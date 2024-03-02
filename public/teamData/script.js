@@ -103,7 +103,7 @@ function displayData(data) {
     ["true"],
     [2],
     "Match Played",
-    "Pieces"
+    "Point"
   );
   drawMetric(
     data,
@@ -358,6 +358,8 @@ function makeLineChart(data, chartName, axisXLabel, axisYLabel) {
     },
     axisX: {
       title: axisXLabel,
+      interval: 1,
+      labelAutoFit: false,
     },
     axisY: {
       title: axisYLabel,
