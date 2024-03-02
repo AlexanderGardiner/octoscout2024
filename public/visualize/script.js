@@ -224,7 +224,7 @@ function makeEloGraph(eloData) {
   let chartDiv = document.createElement("div");
   chartDiv.id = "Elo Rank";
   chartDiv.style.height = "200px";
-  chartDiv.style.width = "30%";
+  chartDiv.style.width = "40%";
   chartDiv.style.margin = "10px";
   document.getElementById("graphContainer").appendChild(chartDiv);
   var chart = new CanvasJS.Chart("Elo Rank", {
@@ -254,7 +254,7 @@ function makeBoxAndWhiskerGraph(dataPoints, meanPoints, chartName, yLable) {
   let chartDiv = document.createElement("div");
   chartDiv.id = chartName;
   chartDiv.style.height = "200px";
-  chartDiv.style.width = "30%";
+  chartDiv.style.width = "40%";
   chartDiv.style.margin = "10px";
   document.getElementById("graphContainer").appendChild(chartDiv);
   var chart = new CanvasJS.Chart(chartName, {

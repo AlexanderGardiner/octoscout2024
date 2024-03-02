@@ -27,51 +27,73 @@ function updateElo(winner_elo, loser_elo, numberOfMatches) {
   return [winner_elo_new, loser_elo_new];
 }
 
-let teams = {};
 function calculateElos(data) {
+  let eloTeams = {};
   let teamNames = [];
+  console.log("ELOTEAMS" + JSON.stringify(eloTeams));
   dataKeys = Object.keys(data);
 
   for (let i = 0; i < data.length; i++) {
-    if (!teamNames.includes(data[i]["01teamNumber"])) {
+    if (
+      !teamNames.includes(data[i]["01teamNumber"]) &&
+      data[i]["01teamNumber"] != undefined
+    ) {
+      console.log(data[i]["01teamNumber"]);
       teamNames.push(data[i]["01teamNumber"]);
     }
   }
+  console.log("ELOTEAMS" + JSON.stringify(eloTeams));
 
   for (let i = 0; i < teamNames.length; i++) {
-    teams[teamNames[i]] = 1200;
+    eloTeams[teamNames[i]] = 1200;
   }
 
-  console.log(teams);
+  console.log("ELOTEAMS" + JSON.stringify(eloTeams));
 
   for (let i = 0; i < data.length; i++) {
     let [winner_elo_new, loser_elo_new] = [0, 0];
 
     // Update Elo ratings of the winner and loser
+    if (
+      eloTeams[data[i]["24bestTeamInput"]] != null &&
+      eloTeams[data[i]["25middleTeamInput"]] == null
+    ) {
+      [winner_elo_new, loser_elo_new] = updateElo(
+        eloTeams[data[i]["24bestTeamInput"]],
+        eloTeams[data[i]["25middleTeamInput"]],
+        i
+      );
 
-    [winner_elo_new, loser_elo_new] = updateElo(
-      teams[data[i]["24bestTeamInput"]],
-      teams[data[i]["25middleTeamInput"]],
-      i
-    );
-    teams[data[i]["24bestTeamInput"]] = winner_elo_new;
-    teams[data[i]["25middleTeamInput"]] = loser_elo_new;
+      eloTeams[data[i]["24bestTeamInput"]] = winner_elo_new;
+      eloTeams[data[i]["25middleTeamInput"]] = loser_elo_new;
+    }
 
-    [winner_elo_new, loser_elo_new] = updateElo(
-      teams[data[i]["24bestTeamInput"]],
-      teams[data[i]["26worstTeamInput"]],
-      i
-    );
-    teams[data[i]["24bestTeamInput"]] = winner_elo_new;
-    teams[data[i]["26worstTeamInput"]] = loser_elo_new;
+    if (
+      eloTeams[data[i]["24bestTeamInput"]] != null &&
+      eloTeams[data[i]["26worstTeamInput"]] == null
+    ) {
+      [winner_elo_new, loser_elo_new] = updateElo(
+        eloTeams[data[i]["24bestTeamInput"]],
+        eloTeams[data[i]["26worstTeamInput"]],
+        i
+      );
 
-    [winner_elo_new, loser_elo_new] = updateElo(
-      teams[data[i]["25middleTeamInput"]],
-      teams[data[i]["26worstTeamInput"]]
-    );
-    teams[data[i]["25middleTeamInput"]] = winner_elo_new;
-    teams[data[i]["26worstTeamInput"]] = loser_elo_new;
+      eloTeams[data[i]["24bestTeamInput"]] = winner_elo_new;
+      eloTeams[data[i]["26worstTeamInput"]] = loser_elo_new;
+    }
+
+    if (
+      eloTeams[data[i]["25middleTeamInput"]] != null &&
+      eloTeams[data[i]["26worstTeamInput"]] == null
+    ) {
+      [winner_elo_new, loser_elo_new] = updateElo(
+        eloTeams[data[i]["25middleTeamInput"]],
+        eloTeams[data[i]["26worstTeamInput"]]
+      );
+      eloTeams[data[i]["25middleTeamInput"]] = winner_elo_new;
+      eloTeams[data[i]["26worstTeamInput"]] = loser_elo_new;
+    }
   }
-
-  return teams;
+  console.log("ELOTEAMS" + JSON.stringify(eloTeams));
+  return eloTeams;
 }
