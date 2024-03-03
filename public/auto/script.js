@@ -6,7 +6,6 @@ let collectedNotes = 0;
 function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
-  if (collectionLocation=="")
   collectedNotes += 1;
   updateNoteViewer();
 }
