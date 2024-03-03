@@ -25,7 +25,11 @@ function resultPiece(result, timestamp) {
     ampSpeakerNotes += 1;
   } else if (result == "trap") {
     trapNotes += 1;
-  } else if (result == "failed") {
+  } else if (result == "failedSpeaker") {
+    failedNotes += 1;
+  } else if (result == "failedAmp") {
+    failedNotes += 1;
+  } else if (result == "failedTrap") {
     failedNotes += 1;
   }
 }
