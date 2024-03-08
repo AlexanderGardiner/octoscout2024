@@ -1,5 +1,10 @@
 async function submit() {
   console.log(localStorage);
+  localStorage.setItem("Comments", document.getElementById("comments").value);
+  localStorage.setItem(
+    "29died",
+    document.getElementById("diedCheckbox").checked
+  );
   let response;
   try {
     response = await fetch("../submitData", {
