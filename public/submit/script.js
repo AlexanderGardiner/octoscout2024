@@ -1,26 +1,34 @@
+let matchSubmitted = false;
+
 async function submit() {
-  console.log(localStorage);
-  localStorage.setItem("Comments", document.getElementById("comments").value);
-  localStorage.setItem(
-    "29died",
-    document.getElementById("diedCheckbox").checked
-  );
-  let response;
-  try {
-    response = await fetch("../submitData", {
-      method: "POST", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(localStorage),
-    });
-  } catch (err) {
-    backupData();
-    alert("FAILED SUBMISSION");
-  }
-  if (response.status == 200) {
-    backupData();
-    alert("Match Submitted");
+  if (
+    !matchSubmitted ||
+    confirm("Are you sure you want to submit a second match?")
+  ) {
+    console.log(localStorage);
+    localStorage.setItem("Comments", document.getElementById("comments").value);
+    localStorage.setItem(
+      "29died",
+      document.getElementById("diedCheckbox").checked
+    );
+    let response;
+    try {
+      response = await fetch("../submitData", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(localStorage),
+      });
+    } catch (err) {
+      backupData();
+      alert("FAILED SUBMISSION");
+    }
+    if (response.status == 200) {
+      backupData();
+      alert("Match Submitted");
+    }
+    matchSubmitted = true;
   }
 }
 function backupData() {
