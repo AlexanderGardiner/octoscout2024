@@ -13,7 +13,7 @@ function nextButton() {
     "22endgameHarmony",
     document.getElementById("Harmony").value
   );
-  window.location.href = "../rank";
+  window.location.href = "../submit";
 }
 
 function backButton() {

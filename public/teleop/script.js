@@ -25,11 +25,7 @@ function resultPiece(result, timestamp) {
     ampSpeakerNotes += 1;
   } else if (result == "trap") {
     trapNotes += 1;
-  } else if (result == "failedSpeaker") {
-    failedNotes += 1;
-  } else if (result == "failedAmp") {
-    failedNotes += 1;
-  } else if (result == "failedTrap") {
+  } else if (result == "failed") {
     failedNotes += 1;
   }
 }
@@ -71,6 +67,9 @@ function updateNoteViewer() {
     note.style.color = "white";
 
     notesContainer.appendChild(noteContainer);
+
+    let notesViewer = document.getElementById("notesViewer");
+    notesViewer.scrollTop = notesViewer.scrollHeight;
   }
 }
 
@@ -120,8 +119,10 @@ function loadPreviousData() {
     .getItem("28teleopNotesTimestamps")
     .split(",");
   for (let i = 0; i < noteLocations.length; i++) {
-    collectPiece(noteLocations[i]);
-    resultPiece(noteResults[i], noteTimestamps[i]);
+    if (noteLocations[i] != "") {
+      collectPiece(noteLocations[i]);
+      resultPiece(noteResults[i], noteTimestamps[i]);
+    }
   }
   if (localStorage.getItem("defenseBot") == "true") {
     defenseCheckbox.checked = true;

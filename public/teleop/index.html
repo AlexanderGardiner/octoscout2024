@@ -23,19 +23,21 @@
       <button id="topButton" class="collectionButton" onclick="collectPiece('top')"></button>
       <button id="middleButton" class="collectionButton" onclick="collectPiece('middle')"></button>
       <button id="bottomButton" class="collectionButton" onclick="collectPiece('bottom')"></button>
+      <button id="startingButton" class="collectionButton" onclick="collectPiece('startingNote')">Starting Note</button>
+      <br>
+      <br>
+      <br>
       <h3 id="defenseCheckboxLabel">Primarily Defense: </h3>
       <input type="checkbox" id="defenseCheckbox" value="Defense">
-      <br>
-      <button id="startingButton" class="collectionButton" onclick="collectPiece('startingNote')">Starting Note</button>
+      
+      
     </div>
     <div id="bottomContainer">
       <button class="placementButton" onclick="resultPiece('speaker',Date.now())">Speaker</button>
       <button class="placementButton" onclick="resultPiece('amp',Date.now())">Amp</button>
       <button class="placementButton" onclick="resultPiece('ampSpeaker',Date.now())">Amplified Speaker</button>
       <button class="placementButton" onclick="resultPiece('trap',Date.now())">Trap</button>
-      <button class="placementButton" onclick="resultPiece('failedSpeaker',Date.now())">Failed Speaker</button>
-      <button class="placementButton" onclick="resultPiece('failedAmp',Date.now())">Failed Amp</button>
-      <button class="placementButton" onclick="resultPiece('failedTrap',Date.now())">Failed Trap</button>
+      <button class="placementButton" onclick="resultPiece('failed',Date.now())">Failed</button>
       <button class="placementButton" onclick="resultPiece('intentionalDrop',Date.now())">Intentional Drop</button>
     </div>
     

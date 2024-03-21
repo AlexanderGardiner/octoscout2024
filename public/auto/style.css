@@ -43,7 +43,6 @@
   width: 50%;
 }
 
-
 .noteButton {
   border-radius: 100%;
   position: absolute;
@@ -113,26 +112,32 @@
 #mobilityCheckboxLabel {
   display: inline;
   color: white;
+  font-size: 30px;
+}
+
+#mobilityCheckbox {
+  width: 30px;
+  height: 30px;
 }
 
 #startingButton {
   border-radius: 0%;
-  width: 100px;
+  width: 150px;
   margin: 10px;
   background-color: #4f4425;
-  height: 20px;
+  height: 50px;
 }
 
 #droppedButton {
   border-radius: 0%;
-  width: 100px;
+  width: 150px;
   margin: 10px;
   background-color: #bfb089;
-  height: 20px;
+  height: 50px;
 }
 .placementButton {
   width: 15vh;
-  height: 3vh;
+  height: 5vh;
   z-index: 10;
   bottom: 30vh;
   margin: 0.5vh;

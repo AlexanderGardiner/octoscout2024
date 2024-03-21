@@ -19,11 +19,7 @@ function resultPiece(result, timestamp) {
     speakerNotes += 1;
   } else if (result == "amp") {
     ampNotes += 1;
-  } else if (result == "failedSpeaker") {
-    failedNotes += 1;
-  } else if (result == "failedAmps") {
-    failedNotes += 1;
-  } else if (result == "failedPickup") {
+  } else if (result == "failed") {
     failedNotes += 1;
   }
 }
@@ -83,6 +79,8 @@ function updateNoteViewer() {
     note.style.color = "black";
 
     notesContainer.appendChild(noteContainer);
+    let notesViewer = document.getElementById("notesViewer");
+    notesViewer.scrollTop = notesViewer.scrollHeight;
   }
 }
 
@@ -126,9 +124,12 @@ function loadPreviousData() {
   let noteResults = localStorage.getItem("11autoNotesResults").split(",");
   let noteTimestamps = localStorage.getItem("27autoNotesTimestamps").split(",");
   for (let i = 0; i < noteLocations.length; i++) {
-    collectPiece(noteLocations[i]);
-    resultPiece(noteResults[i], noteTimestamps[i]);
+    if (noteLocations[i] != "") {
+      collectPiece(noteLocations[i]);
+      resultPiece(noteResults[i], noteTimestamps[i]);
+    }
   }
+
   if (localStorage.getItem("09autoMobility") == "true") {
     mobilityCheckbox.checked = true;
   } else {
