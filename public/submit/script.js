@@ -60,5 +60,5 @@ function downloadJSON() {
 }
 
 function backButton() {
-  window.location.href = "../rank";
+  window.location.href = "../endgame";
 }

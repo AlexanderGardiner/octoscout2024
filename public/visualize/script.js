@@ -57,6 +57,24 @@ function displayData(data) {
     [],
     []
   );
+  makeCompositeGraph(
+    data,
+    "Jay's Metric",
+    "Arbitrary Units",
+    [
+      "06autoCountSpeaker",
+      "07autoCountAmp",
+      "13teleopCountSpeaker",
+      "14teleopCountAmp",
+      "15teleopCountAmpSpeaker",
+      "23trapNotes",
+      "12teleopCountCollected",
+    ],
+    [6, 2, 2.2, 2.2, 2.2, 5, 1],
+    ["20endgameOnstage"],
+    ["Successful"],
+    [3]
+  );
   tempDiv = document.createElement("div");
   tempDiv.style.width = "100%";
   tempDiv.style.height = "40px";
