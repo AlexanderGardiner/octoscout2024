@@ -49,6 +49,18 @@ function updateNoteViewer() {
     note.style.borderRadius = "4px";
     notes[i].deleteImage = deleteImage;
     deleteImage.onclick = () => {
+      collectedNotes -= 1;
+      if (notes[i].result == "speaker") {
+        speakerNotes -= 1;
+      } else if (notes[i].result == "amp") {
+        ampNotes -= 1;
+      } else if (notes[i].result == "ampSpeaker") {
+        ampSpeakerNotes -= 1;
+      } else if (notes[i].result == "trap") {
+        trapNotes -= 1;
+      } else if (notes[i].result == "failed") {
+        failedNotes -= 1;
+      }
       notes.splice(i, 1);
       updateNoteViewer();
     };
