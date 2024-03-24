@@ -70,10 +70,26 @@ function displayData(data) {
       "23trapNotes",
       "12teleopCountCollected",
     ],
-    [6, 2, 2.2, 2.2, 2.2, 5, 1],
+    [6, 2, 2.2, 0.4, 2.2, 5, 1],
     ["20endgameOnstage"],
     ["Successful"],
     [3]
+  );
+
+  makeCompositeGraph(
+    data,
+    "Ramsey's Metric",
+    "Arbitrary Units",
+    [
+      "12teleopCountCollected",
+      "16teleopCountFailed",
+      "05autoCountCollected",
+      "08autoCountFailed",
+    ],
+    [1, -1, 1, -1],
+    ["20endgameOnstage"],
+    ["Successful"],
+    [1]
   );
   tempDiv = document.createElement("div");
   tempDiv.style.width = "100%";
@@ -275,6 +291,16 @@ function makeBoxAndWhiskerGraph(dataPoints, meanPoints, chartName, yLable) {
   chartDiv.style.width = "100%";
   chartDiv.style.margin = "10px";
   document.getElementById("graphContainer").appendChild(chartDiv);
+  console.log(chartName);
+  let ranks = "";
+  for (let i = 0; i < dataPoints.length; i++) {
+    if (i != 0) {
+      ranks = ranks + "," + dataPoints[i].label;
+    } else {
+      ranks = dataPoints[i].label;
+    }
+  }
+  console.log(ranks);
   var chart = new CanvasJS.Chart(chartName, {
     title: {
       text: chartName,
@@ -319,7 +345,7 @@ function makeCompositeGraph(
   stringPointAmounts
 ) {
   let teams = [];
-  dataKeys = Object.keys(data);
+  dataKeys = Object.keys(data[0]);
 
   for (let i = 0; i < data.length; i++) {
     if (!teams.includes(data[i]["01teamNumber"])) {
@@ -601,6 +627,5 @@ function csvJSON(csv) {
 
     result.push(obj);
   }
-
   return result;
 }
