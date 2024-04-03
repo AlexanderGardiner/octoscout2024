@@ -91,6 +91,31 @@ function drawData(data) {
   redTeam1 = document.getElementById("redTeam1").value;
   redTeam2 = document.getElementById("redTeam2").value;
   redTeam3 = document.getElementById("redTeam3").value;
+
+  redTeam1Data.push({
+    label: "Jay's Metric",
+    y: getMeanTeamPoints(
+      redTeam1,
+      data,
+      [
+        "06autoCountSpeaker",
+        "13teleopCountSpeaker",
+        "14teleopCountAmp",
+        "15teleopCountAmpSpeaker",
+        "23trapNotes",
+        "30middle1Count",
+        "31middle2Count",
+        "32middle3Count",
+        "33middle4Count",
+        "34middle5Count",
+        "35intentionalDropCount",
+      ],
+      [1.67, 3, 3.4, 3.2, 5, 3.33, 3.33, 3.33, 3.33, 3.33, 2],
+      ["20endgameOnstage"],
+      ["Successful"],
+      [3]
+    ),
+  });
   redTeam1Data.push({
     label: "Mean Points",
     y: getMeanTeamPoints(
@@ -190,6 +215,31 @@ function drawData(data) {
   redTeam1Data.push({
     label: "Elo",
     y: getTeamElo(redTeam1, jsonData),
+  });
+
+  redTeam2Data.push({
+    label: "Jay's Metric",
+    y: getMeanTeamPoints(
+      redTeam2,
+      data,
+      [
+        "06autoCountSpeaker",
+        "13teleopCountSpeaker",
+        "14teleopCountAmp",
+        "15teleopCountAmpSpeaker",
+        "23trapNotes",
+        "30middle1Count",
+        "31middle2Count",
+        "32middle3Count",
+        "33middle4Count",
+        "34middle5Count",
+        "35intentionalDropCount",
+      ],
+      [1.67, 3, 3.4, 3.2, 5, 3.33, 3.33, 3.33, 3.33, 3.33, 2],
+      ["20endgameOnstage"],
+      ["Successful"],
+      [3]
+    ),
   });
 
   redTeam2Data.push({
@@ -294,6 +344,31 @@ function drawData(data) {
   });
 
   redTeam3Data.push({
+    label: "Jay's Metric",
+    y: getMeanTeamPoints(
+      redTeam3,
+      data,
+      [
+        "06autoCountSpeaker",
+        "13teleopCountSpeaker",
+        "14teleopCountAmp",
+        "15teleopCountAmpSpeaker",
+        "23trapNotes",
+        "30middle1Count",
+        "31middle2Count",
+        "32middle3Count",
+        "33middle4Count",
+        "34middle5Count",
+        "35intentionalDropCount",
+      ],
+      [1.67, 3, 3.4, 3.2, 5, 3.33, 3.33, 3.33, 3.33, 3.33, 2],
+      ["20endgameOnstage"],
+      ["Successful"],
+      [3]
+    ),
+  });
+
+  redTeam3Data.push({
     label: "Mean Points",
     y: getMeanTeamPoints(
       redTeam3,
@@ -392,6 +467,31 @@ function drawData(data) {
   redTeam3Data.push({
     label: "Elo",
     y: getTeamElo(redTeam3, jsonData),
+  });
+
+  blueTeam1Data.push({
+    label: "Jay's Metric",
+    y: getMeanTeamPoints(
+      blueTeam1,
+      data,
+      [
+        "06autoCountSpeaker",
+        "13teleopCountSpeaker",
+        "14teleopCountAmp",
+        "15teleopCountAmpSpeaker",
+        "23trapNotes",
+        "30middle1Count",
+        "31middle2Count",
+        "32middle3Count",
+        "33middle4Count",
+        "34middle5Count",
+        "35intentionalDropCount",
+      ],
+      [1.67, 3, 3.4, 3.2, 5, 3.33, 3.33, 3.33, 3.33, 3.33, 2],
+      ["20endgameOnstage"],
+      ["Successful"],
+      [3]
+    ),
   });
 
   blueTeam1Data.push({
@@ -495,6 +595,31 @@ function drawData(data) {
   });
 
   blueTeam2Data.push({
+    label: "Jay's Metric",
+    y: getMeanTeamPoints(
+      blueTeam2,
+      data,
+      [
+        "06autoCountSpeaker",
+        "13teleopCountSpeaker",
+        "14teleopCountAmp",
+        "15teleopCountAmpSpeaker",
+        "23trapNotes",
+        "30middle1Count",
+        "31middle2Count",
+        "32middle3Count",
+        "33middle4Count",
+        "34middle5Count",
+        "35intentionalDropCount",
+      ],
+      [1.67, 3, 3.4, 3.2, 5, 3.33, 3.33, 3.33, 3.33, 3.33, 2],
+      ["20endgameOnstage"],
+      ["Successful"],
+      [3]
+    ),
+  });
+
+  blueTeam2Data.push({
     label: "Mean Points",
     y: getMeanTeamPoints(
       blueTeam2,
@@ -591,6 +716,31 @@ function drawData(data) {
   blueTeam2Data.push({
     label: "Elo",
     y: getTeamElo(blueTeam2, jsonData),
+  });
+
+  blueTeam3Data.push({
+    label: "Jay's Metric",
+    y: getMeanTeamPoints(
+      blueTeam3,
+      data,
+      [
+        "06autoCountSpeaker",
+        "13teleopCountSpeaker",
+        "14teleopCountAmp",
+        "15teleopCountAmpSpeaker",
+        "23trapNotes",
+        "30middle1Count",
+        "31middle2Count",
+        "32middle3Count",
+        "33middle4Count",
+        "34middle5Count",
+        "35intentionalDropCount",
+      ],
+      [1.67, 3, 3.4, 3.2, 5, 3.33, 3.33, 3.33, 3.33, 3.33, 2],
+      ["20endgameOnstage"],
+      ["Successful"],
+      [3]
+    ),
   });
 
   blueTeam3Data.push({
