@@ -1,6 +1,7 @@
 let matchSubmitted = false;
 
 async function submit() {
+  localStorage.setItem("MatchBackups", "");
   if (
     !matchSubmitted ||
     confirm("Are you sure you want to submit a second match?")
@@ -21,11 +22,11 @@ async function submit() {
         body: JSON.stringify(localStorage),
       });
     } catch (err) {
-      backupData();
+      // backupData();
       alert("FAILED SUBMISSION");
     }
     if (response.status == 200) {
-      backupData();
+      // backupData();
       alert("Match Submitted");
     }
     matchSubmitted = true;

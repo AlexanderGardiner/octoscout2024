@@ -3,8 +3,25 @@ let speakerNotes = 0;
 let ampNotes = 0;
 let failedNotes = 0;
 let collectedNotes = 0;
+let middle1Count = 0;
+let middle2Count = 0;
+let middle3Count = 0;
+let middle4Count = 0;
+let middle5Count = 0;
+
 function collectPiece(collectionLocation) {
   console.log(notes);
+  if (collectionLocation == "middle1") {
+    middle1Count += 1;
+  } else if (collectionLocation == "middle2") {
+    middle2Count += 1;
+  } else if (collectionLocation == "middle3") {
+    middle3Count += 1;
+  } else if (collectionLocation == "middle4") {
+    middle4Count += 1;
+  } else if (collectionLocation == "middle5") {
+    middle5Count += 1;
+  }
   notes.push(new Note(collectionLocation));
   collectedNotes += 1;
   updateNoteViewer();
@@ -20,8 +37,30 @@ function resultPiece(result, timestamp) {
   } else if (result == "amp") {
     ampNotes += 1;
   } else if (result == "failed") {
+    if (notes[notes.length - 1].collectionLocation == "middle1") {
+      middle1Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle2") {
+      middle2Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle3") {
+      middle3Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle4") {
+      middle4Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle5") {
+      middle5Count -= 1;
+    }
     failedNotes += 1;
   } else if (result == "failedIntake") {
+    if (notes[notes.length - 1].collectionLocation == "middle1") {
+      middle1Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle2") {
+      middle2Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle3") {
+      middle3Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle4") {
+      middle4Count -= 1;
+    } else if (notes[notes.length - 1].collectionLocation == "middle5") {
+      middle5Count -= 1;
+    }
     failedNotes += 1;
   }
 }
@@ -50,10 +89,6 @@ function updateNoteViewer() {
         speakerNotes -= 1;
       } else if (notes[i].result == "amp") {
         ampNotes -= 1;
-      } else if (notes[i].result == "ampSpeaker") {
-        ampSpeakerNotes -= 1;
-      } else if (notes[i].result == "trap") {
-        trapNotes -= 1;
       } else if (notes[i].result == "failed") {
         failedNotes -= 1;
       } else if (notes[i].result == "failedIntake") {
@@ -130,6 +165,12 @@ function nextButton() {
   localStorage.setItem("06autoCountSpeaker", speakerNotes);
   localStorage.setItem("07autoCountAmp", ampNotes);
   localStorage.setItem("08autoCountFailed", failedNotes);
+
+  localStorage.setItem("30middle1Count", middle1Count);
+  localStorage.setItem("31middle2Count", middle2Count);
+  localStorage.setItem("32middle3Count", middle3Count);
+  localStorage.setItem("33middle4Count", middle4Count);
+  localStorage.setItem("34middle5Count", middle5Count);
 
   window.location.href = "../teleop";
 }

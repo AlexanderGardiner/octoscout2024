@@ -5,6 +5,7 @@ let ampSpeakerNotes = 0;
 let trapNotes = 0;
 let failedNotes = 0;
 let collectedNotes = 0;
+let intentionalDropsCount = 0;
 function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
@@ -27,6 +28,8 @@ function resultPiece(result, timestamp) {
     trapNotes += 1;
   } else if (result == "failed") {
     failedNotes += 1;
+  } else if (result == "intentionalDrop") {
+    intentionalDropsCount += 1;
   }
 }
 
@@ -118,6 +121,8 @@ function nextButton() {
 
   localStorage.setItem("23trapNotes", trapNotes);
   localStorage.setItem("defenseBot", defenseCheckbox.checked);
+
+  localStorage.setItem("35intentionalDropCount", intentionalDropsCount);
 
   window.location.href = "../endgame";
 }
