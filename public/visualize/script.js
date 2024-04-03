@@ -63,7 +63,6 @@ function displayData(data) {
     "Arbitrary Units",
     [
       "06autoCountSpeaker",
-      "07autoCountAmp",
       "13teleopCountSpeaker",
       "14teleopCountAmp",
       "15teleopCountAmpSpeaker",
@@ -75,7 +74,7 @@ function displayData(data) {
       "34middle5Count",
       "35intentionalDropCount",
     ],
-    [3, 2, 3, 3.2, 2.2, 5, 3, 3, 3, 3, 3, 2],
+    [1.67, 3, 3.4, 3.2, 5, 3.33, 3.33, 3.33, 3.33, 3.33, 2],
     ["20endgameOnstage"],
     ["Successful"],
     [3]
