@@ -22,7 +22,7 @@ app.listen(PORT, () => {
 });
 
 function writeDataToCSV(data) {
-  //backupJSON(data);
+  backupJSON(data);
   let filePath = "public/output.csv";
   data.timestamp = new Date();
   const sortedKeys = Object.keys(data).sort();
