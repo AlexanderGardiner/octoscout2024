@@ -371,6 +371,7 @@ function makeCompositeGraph(
         let points = 0;
         for (let k = 0; k < jsonCountKeys.length; k++) {
           points += data[i][jsonCountKeys[k]] * countPointAmounts[k];
+          console.log(jsonCountKeys[k] + data[i][jsonCountKeys[k]]);
         }
 
         for (let k = 0; k < jsonStringKeys.length; k++) {
