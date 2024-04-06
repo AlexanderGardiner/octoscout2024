@@ -304,7 +304,16 @@ function makeBoxAndWhiskerGraph(dataPoints, meanPoints, chartName, yLable) {
       ranks = dataPoints[i].label;
     }
   }
+  let scores = "";
+  for (let i = 0; i < dataPoints.length; i++) {
+    if (i != 0) {
+      scores = scores + "," + dataPoints[i].y[2];
+    } else {
+      scores = dataPoints[i].y[2];
+    }
+  }
   console.log(ranks);
+  console.log(scores);
   var chart = new CanvasJS.Chart(chartName, {
     title: {
       text: chartName,
@@ -371,7 +380,6 @@ function makeCompositeGraph(
         let points = 0;
         for (let k = 0; k < jsonCountKeys.length; k++) {
           points += data[i][jsonCountKeys[k]] * countPointAmounts[k];
-          console.log(jsonCountKeys[k] + data[i][jsonCountKeys[k]]);
         }
 
         for (let k = 0; k < jsonStringKeys.length; k++) {
@@ -408,7 +416,7 @@ function makeCompositeGraph(
       y: mean,
     });
   }
-  scored.sort((a, b) => parseFloat(b.y[4]) - parseFloat(a.y[4]));
+  scored.sort((a, b) => parseFloat(b.y[2]) - parseFloat(a.y[2]));
   let sortedMeans = [];
   for (let k = 0; k < scored.length; k++) {
     let meanValue = 0;
