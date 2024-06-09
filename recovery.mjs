@@ -5,6 +5,7 @@ import path from "path";
 const folderPath = "./JSONBackups"; // Replace this with the actual path to your folder containing JSON files
 const url = "http://team9084.com:9084/submitData"; // Replace this with the actual API endpoint
 
+// Generates the data from csv backups
 async function readAndFetchJSONFiles(folderPath) {
   try {
     const files = await fs.readdir(folderPath);

@@ -9,6 +9,7 @@ let middle3Count = 0;
 let middle4Count = 0;
 let middle5Count = 0;
 
+// Collects a note
 function collectPiece(collectionLocation) {
   console.log(notes);
   if (collectionLocation == "middle1") {
@@ -27,6 +28,7 @@ function collectPiece(collectionLocation) {
   updateNoteViewer();
 }
 
+// Sets the result of a note
 function resultPiece(result, timestamp) {
   console.log(notes);
   notes[notes.length - 1].result = result;
@@ -65,6 +67,7 @@ function resultPiece(result, timestamp) {
   }
 }
 
+// Updates a viewer to see which notes have been collected and what happened to them
 function updateNoteViewer() {
   console.log(notes);
   let notesContainer = document.getElementById("notesContainer");
@@ -146,6 +149,7 @@ function backButton() {
   window.location.href = "../initalPosition";
 }
 
+// Saves the data and moves to the next page
 function nextButton() {
   let collectionLocations = [];
   let results = [];
@@ -176,6 +180,7 @@ function nextButton() {
 }
 loadPreviousData();
 
+// Loads previous data
 function loadPreviousData() {
   let noteLocations = localStorage.getItem("10autoNotesLocations").split(",");
   let noteResults = localStorage.getItem("11autoNotesResults").split(",");

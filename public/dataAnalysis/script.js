@@ -1,3 +1,4 @@
+// Redirect functions
 function visualize() {
   window.location.href = "../visualize";
 }

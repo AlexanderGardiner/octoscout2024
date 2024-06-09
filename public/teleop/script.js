@@ -6,6 +6,8 @@ let trapNotes = 0;
 let failedNotes = 0;
 let collectedNotes = 0;
 let intentionalDropsCount = 0;
+
+// Collects a note
 function collectPiece(collectionLocation) {
   console.log(notes);
   notes.push(new Note(collectionLocation));
@@ -13,6 +15,7 @@ function collectPiece(collectionLocation) {
   updateNoteViewer();
 }
 
+// Sets a note's result
 function resultPiece(result, timestamp) {
   console.log(notes);
   notes[notes.length - 1].result = result;
@@ -33,6 +36,7 @@ function resultPiece(result, timestamp) {
   }
 }
 
+// Visualizes which notes were collected and their results
 function updateNoteViewer() {
   console.log(notes);
   let notesContainer = document.getElementById("notesContainer");
@@ -99,6 +103,7 @@ function backButton() {
   window.location.href = "../auto";
 }
 
+// Saves the data and moves to the next page
 function nextButton() {
   let collectionLocations = [];
   let results = [];
@@ -129,6 +134,7 @@ function nextButton() {
 
 loadPreviousData();
 
+// Loads previous data
 function loadPreviousData() {
   let noteLocations = localStorage.getItem("17teleopNotesLocations").split(",");
   let noteResults = localStorage.getItem("18teleopNotesResults").split(",");

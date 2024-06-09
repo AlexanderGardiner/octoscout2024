@@ -16,6 +16,7 @@ function updateTeam() {
 }
 updateTeam();
 
+// Visualizes each team's auto
 function displayData(data) {
   for (let i = 0; i < data.length; i++) {
     if (data[i]["01teamNumber"] == team) {
@@ -33,6 +34,7 @@ function displayData(data) {
         960
       );
 
+      // Draws a box on collection locations and lines between them
       let autoCollectionLocations = data[i]["10autoNotesLocations"].split("-");
       console.log(autoCollectionLocations);
       let autoPlacementLocations = data[i]["11autoNotesResults"].split("-");

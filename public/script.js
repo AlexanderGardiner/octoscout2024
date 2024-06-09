@@ -3,6 +3,8 @@ let dataBackup = localStorage.getItem("MatchBackups");
 localStorage.clear();
 localStorage.setItem("00scoutName", scoutName);
 localStorage.setItem("MatchBackups", dataBackup);
+
+// Saves the data and moves to the next page
 function nextButton() {
   let scoutName = document.getElementById("scoutNameInput").value;
   let teamNumber = document.getElementById("teamNumberInput").value;

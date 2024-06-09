@@ -6,6 +6,7 @@ fetch("../output.csv")
     displayData(csvJSON(data));
   });
 
+// Creates graphs for data visualization with a variety of metrics
 function displayData(data) {
   let tempDiv = document.createElement("div");
   tempDiv.style.width = "100%";
@@ -251,6 +252,7 @@ function back() {
   window.location.href = "../dataAnalysis";
 }
 
+// Generates a graph based on elo
 function makeEloGraph(eloData) {
   let eloDataPoints = [];
   let eloDataKeys = Object.keys(eloData);
@@ -288,6 +290,7 @@ function makeEloGraph(eloData) {
   chart.render();
 }
 
+// Generates a box and whisker graph
 function makeBoxAndWhiskerGraph(dataPoints, meanPoints, chartName, yLable) {
   let chartDiv = document.createElement("div");
   chartDiv.id = chartName;
@@ -347,6 +350,7 @@ function makeBoxAndWhiskerGraph(dataPoints, meanPoints, chartName, yLable) {
   chart.render();
 }
 
+// Generates a graph containing data with points and without points
 function makeCompositeGraph(
   data,
   chartName,
@@ -431,6 +435,7 @@ function makeCompositeGraph(
   makeBoxAndWhiskerGraph(scored, sortedMeans, chartName, yLable);
 }
 
+// Creates a graph of data without points
 function makeGraph(jsonKey, data, chartName, yLable, pointsPerScore) {
   let teams = [];
   dataKeys = Object.keys(data);
@@ -496,6 +501,7 @@ function makeGraph(jsonKey, data, chartName, yLable, pointsPerScore) {
   makeBoxAndWhiskerGraph(scored, sortedMeans, chartName, yLable);
 }
 
+// Makes a graph with points
 function makeGraphOneTimePoints(
   jsonKey,
   data,

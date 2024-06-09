@@ -13,6 +13,8 @@ let blueTeam3 = document.getElementById("blueTeam3").value;
 let redTeam1 = document.getElementById("redTeam1").value;
 let redTeam2 = document.getElementById("redTeam2").value;
 let redTeam3 = document.getElementById("redTeam3").value;
+
+// Makes a chart where each team's contribution is visualized as a percentage
 function make100Chart(
   redTeam1Data,
   redTeam2Data,
@@ -76,6 +78,8 @@ function make100Chart(
 function updateData() {
   drawData(jsonData);
 }
+
+// Draws the graphs, appending each team's stats for a variety of metrics
 function drawData(data) {
   let redTeam1Data = [];
   let redTeam2Data = [];
@@ -851,6 +855,7 @@ function drawData(data) {
   );
 }
 
+// Gets the points that a team got based on their data
 function getTeamPoints(
   team,
   data,
@@ -879,6 +884,7 @@ function getTeamPoints(
   return metrics;
 }
 
+// Gets the mean of the team's points
 function getMeanTeamPoints(
   team,
   data,
@@ -909,6 +915,7 @@ function getMeanTeamPoints(
   return averageMetric;
 }
 
+// Gets the median of a team's points
 function getMedianTeamPoints(
   team,
   data,
@@ -937,6 +944,7 @@ function getTeamElo(team, data) {
   return calculateElos(data)[team];
 }
 
+// Parses a csv as json
 function csvJSON(csv) {
   var lines = csv.split("\n");
 
@@ -962,6 +970,7 @@ function back() {
   window.location.href = "../dataAnalysis";
 }
 
+// Calculate quartiles
 function quartiles(values) {
   // Make a copy of the array to avoid altering the original
   var sortedValues = values.slice().sort((a, b) => a - b);

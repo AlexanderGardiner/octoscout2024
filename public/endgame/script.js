@@ -1,3 +1,4 @@
+// Saves the data and moves to the next page
 function nextButton() {
   localStorage.setItem("19endgamePark", document.getElementById("Park").value);
 
@@ -22,6 +23,7 @@ function backButton() {
 
 loadPreviousData();
 
+// Loads previous data
 function loadPreviousData() {
   if (localStorage.getItem("19endgamePark") != null) {
     document.getElementById("Park").value =

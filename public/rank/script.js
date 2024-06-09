@@ -1,3 +1,4 @@
+// Saves the data and moves to the next page
 function nextButton() {
   let bestTeam = document.getElementById("bestTeamInput").value;
   let middleTeam = document.getElementById("middleTeamInput").value;
@@ -11,9 +12,14 @@ function nextButton() {
 function backButton() {
   window.location.href = "/endgame";
 }
+
+// Loads previous data
 loadPreviousData();
 function loadPreviousData() {
-  document.getElementById("bestTeamInput").value = localStorage.getItem("24bestTeamInput");
-  document.getElementById("middleTeamInput").value = localStorage.getItem("25middleTeamInput");
-  document.getElementById("worstTeamInput").value = localStorage.getItem("26worstTeamInput");
+  document.getElementById("bestTeamInput").value =
+    localStorage.getItem("24bestTeamInput");
+  document.getElementById("middleTeamInput").value =
+    localStorage.getItem("25middleTeamInput");
+  document.getElementById("worstTeamInput").value =
+    localStorage.getItem("26worstTeamInput");
 }

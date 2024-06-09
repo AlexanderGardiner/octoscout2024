@@ -8,6 +8,7 @@ function selectPosition(position) {
   nextPage();
 }
 
+// Saves the data and moves to the next page
 function nextPage() {
   localStorage.setItem("04startingRobotPosition", startingRobotPosition);
   window.location.href = "../auto";
