@@ -50,4 +50,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Thank you for taking the time to look at my project. Hope that it is useful to you.
+Thank you for taking the time to look at my project. I hope that it is useful to you.
