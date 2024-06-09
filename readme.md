@@ -50,4 +50,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-Thank you for taking the time to review my project. I hope this demonstrates my abilities in game development and my passion for creating engaging and enjoyable experiences.
+Thank you for taking the time to look at my project. Hope that it is useful to you.
