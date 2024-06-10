@@ -21,9 +21,9 @@ app.post("/submitData", (req, res) => {
   res.send();
 });
 
-const PORT = 9084;
+const PORT = process.env.PORT || 9084;
 app.listen(PORT, () => {
-  console.log("App is listening on port 9084");
+  console.log("App is listening on port " + PORT);
 });
 
 // Writes the data to csv
