@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is the updated version of the custom scouting system developed for FRC Team 9084, tailored for the 2024 game. This iteration builds on the foundation of its predecessor, enhancing data collection, storage, and analysis capabilities to provide an even more robust and efficient scouting solution. With a focus on data visualization using CanvasJS, Octo Scout 2024 enables teams to gain deeper insights into their performance and strategize more effectively.
+This repository is the updated version of the custom scouting system developed for FRC Team 9084, tailored for the 2024 game. This iteration builds on the foundation of its predecessor, enhancing data collection, storage, and analysis capabilities to provide an even more robust and efficient scouting solution. With a focus on data visualization using CanvasJS, octoscout2024 enables teams to gain deeper insights into their performance and strategize more effectively.
 
 ## Built With
 
