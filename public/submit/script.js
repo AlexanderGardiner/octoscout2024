@@ -16,7 +16,7 @@ async function submit() {
     );
     let response;
     try {
-      response = await fetch("../submitData", {
+      response = await fetch("/octoscout2024/submitData", {
         method: "POST", // or 'PUT'
         headers: {
           "Content-Type": "application/json",

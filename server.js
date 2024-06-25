@@ -14,7 +14,7 @@ app.use(
 app.use("/octoscout2024", express.static(path.join(__dirname, "public")));
 
 // Sets up submission endpoint
-app.post("/submitData", (req, res) => {
+app.post("/octoscout2024/submitData", (req, res) => {
   console.log(req.body);
   writeDataToCSV(req.body);
   res.status(200);

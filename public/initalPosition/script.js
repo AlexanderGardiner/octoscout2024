@@ -11,7 +11,7 @@ function selectPosition(position) {
 // Saves the data and moves to the next page
 function nextPage() {
   localStorage.setItem("04startingRobotPosition", startingRobotPosition);
-  window.location.href = "../auto";
+  window.location.href = "/octoscout2024/auto";
 }
 
 function backButton() {

@@ -14,7 +14,7 @@ function nextButton() {
   localStorage.setItem("01teamNumber", teamNumber);
   localStorage.setItem("02matchNumber", matchNumber);
   localStorage.setItem("03teamColour", teamColour);
-  window.location.href = "/initalPosition";
+  window.location.href = "initalPosition";
 }
 
 window.onload = () => {

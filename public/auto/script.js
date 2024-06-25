@@ -176,7 +176,7 @@ function nextButton() {
   localStorage.setItem("33middle4Count", middle4Count);
   localStorage.setItem("34middle5Count", middle5Count);
 
-  window.location.href = "../teleop";
+  window.location.href = "/octoscout2024/teleop";
 }
 loadPreviousData();
 
